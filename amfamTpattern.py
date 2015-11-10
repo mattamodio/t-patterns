@@ -11,16 +11,7 @@ DB = 'amfam'
 TABLE = 'copy'
 EVENT_TYPE_COLUMN = 'eventtype'
 
-NT_list = ['ts', 'cat', 'claimnumber', 'claim_note_id', 'notetypes', 'create_row_ts']
-
-PC_list = ['ts', 'cat', 'opendate', 'closedate', 'state', 'claimnumber', 'callid', 'calltype', \
-'calldirection', 'initiateddate', 'initiateddatetimegmt', 'connecteddate', 'connecteddatetimegmt', \
-'terminateddate', 'terminateddatetimegmt', 'calldurationseconds', 'holddurationseconds', 'linedurationseconds']
-
-AL_list = ['ts', 'cat', 'claimnumber', 'itemtype', 'activitycd', 'activitydesc', 'activity', 'activitydate', 'paymentamount']
-
 ROWS = 170160
-#ROWS = 1000
 
 
 
@@ -92,19 +83,48 @@ def shelveToSQL():
 	# clean up
 	d.close()
 
+def eventsIterator(tpattern):
+
+	# find out how many observations there are
+	tpattern.dbCursor.execute( "SELECT MAX(claimnumber) FROM copy")
+	numberOfObservationPeriods = tpattern.dbCursor.fetchall()[0][0]
+
+	# query one observation period at a time
+	observationPeriod = 1
+	while observationPeriod <= numberOfObservationPeriods:
+		q = "SELECT ts,eventtype FROM copy WHERE claimnumber={0}".format(observationPeriod)
+		tpattern.dbCursor.execute(q)
+		events = tpattern.dbCursor.fetchall()
+		observationPeriod +=1
+		yield events
+
+def testEventsIterator():
+	with open('fakedata.csv', 'r') as f:
+		for line in f:
+			events = line.strip().split(',')
+			events = map(lambda x: (x.split('-')[0], x.split('-')[1]), events)
+			events = map(lambda x: (datetime.datetime.strptime(x[0], "%Y/%m/%d %H:%M:%S"), x[1]), events)
+			yield events
+
 def main(args):
 
 	# get things ready
 	print "Starting at {0}...\n".format(datetime.datetime.now())
 	
-	dbCursor = establishDBconnection(DB)
-
+	#dbCursor = establishDBconnection(DB)
 	tpattern = TPattern.TPattern()
+	#tpattern.setDB(DB, TABLE, dbCursor, EVENT_TYPE_COLUMN)
 
-	tpattern.setDB(DB, TABLE, dbCursor, EVENT_TYPE_COLUMN)
+	for events in testEventsIterator():
+		tpattern.buildDistributions(events)
+	
+	#for events in eventsIterator(tpattern):
+	#	tpattern.buildDistributions(events)
+		
+		
 
+	tpattern.processDistributions()
 
-	tpattern.timeToNextEvent('Claim Activity Log')
 
 
 	print "\nFinished at {0}!".format(datetime.datetime.now())
