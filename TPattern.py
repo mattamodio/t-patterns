@@ -1,6 +1,7 @@
 import bisect
 import sys
-from scipy.stats import binom
+import math
+from scipy.stats import binom, norm
 
 class TPattern(object):
 	def __init__(self):
@@ -60,96 +61,128 @@ class TPattern(object):
 			self.eventTypeCounts[i] = 0
 
 	def buildDistributions(self, events):
-		"""For one observation period, build all of the distributions of event-type pairs for this unit."""
+		"""For one observation period, add N_b,T,interval for all event-type pairs to the appropriate distribution 
+		in the TPattern object. For each eventA, the next instance of each event type is considered an interval.
+		For each eventB, it is only considered an interval for the closest instance of each eventA."""
 		
+
+		# get total time and event-type counts for this observation period
 		firstTime = None
 		lastTime = None
+		eventTypeCounts = {}
+		for event in events:
+			timestamp1, eventtype1 = event
+			if eventtype1 in eventTypeCounts:
+				eventTypeCounts[eventtype1] +=1
+			else:
+				eventTypeCounts[eventtype1] = 1
 		
-		for i in xrange(len(events)):
-			eventPairsSeen = set()
-			# add this pair to distribution
-			event1 = events[i]
-			timestamp1,eventtype1 = event1
-			for event2 in events[i+1:]:
-				timestamp2,eventtype2 = event2
-				key = '{0}-{1}'.format(eventtype1, eventtype2)
-				timedelta = timestamp2 - timestamp1
-				# convert timedelta to hours
-				timedelta = int(timedelta.total_seconds()/(60*60))
-				
-				if key not in eventPairsSeen:
-					bisect.insort(self.eventDistributions[key]['AnextB'],timedelta)
-				else:
-					bisect.insort(self.eventDistributions[key]['AlaterB'],timedelta)
-
-				eventPairsSeen.add(key)
-
-			# keep track of counts
-			self.eventTypeCounts[eventtype1]+=1
-
-			# account for total time
 			if not firstTime or timestamp1<firstTime:
 				firstTime = timestamp1
 			if not lastTime or timestamp1>lastTime:
 				lastTime = timestamp1
+
 		totalTime = lastTime - firstTime
 		totalTime = int(totalTime.total_seconds()/(60*60))
-		self.totalTime += totalTime
+
+
+
+		# iterate over each event instance in reverse, to make sure you only consider the closest instance of eventA to eventB
+		eventPairsSeen = {}
+		for i in xrange(len(events)-1, -1, -1):
+			event1 = events[i]
+			timestamp1, eventtype1 = event1
+
+			# iterate over each later event instance
+			for event2 in events[i+1:]:
+				timestamp2,eventtype2 = event2
+
+				# check if these form a new event-type pair, or if it's the first time this instance has been used as an eventA
+				# for this event-type pair and it's the first time this instance of eventB has been used for this event-type pair
+				key = '{0}-{1}'.format(eventtype1, eventtype2)
+				if key not in eventPairsSeen or not any( [timestamp1==eventA or timestamp2==eventB for eventA,eventB in eventPairsSeen[key]] ):
+
+					# get timedelta in between events in hours
+					timedelta = timestamp2 - timestamp1
+					timedelta = int(timedelta.total_seconds()/(60*60))
+					interval = Interval(timedelta, eventTypeCounts[eventtype2], totalTime)
+
+					bisect.insort(self.eventDistributions[key]['AnextB'], interval)
+
+				
+
+				# track that we've seen this pair, and used this eventA and eventB
+				if key in eventPairsSeen:
+					eventPairsSeen[key].append((timestamp1,timestamp2))
+				else:
+					eventPairsSeen[key] = [(timestamp1,timestamp2)]
+
+			
 
 	def processDistributions(self):
-		self.tpatternsfound=0
 		for key in self.eventDistributions:
-			eventA,eventB = key.split('-')
 
-			self.lookForCriticalIntervals(eventA, eventB)
+			criticalInterval = self.lookForCriticalIntervals(key)
+			if criticalInterval:
+				self.tpatterns.append( (key,criticalInterval) )
 		print
-		print "{0}/{1} intervals have t-patterns.".format(self.tpatternsfound, len(self.eventDistributions))
+		print "{0}/{1} intervals have t-patterns.".format(len(self.tpatterns), len(self.eventDistributions))
 
-	def lookForCriticalIntervals(self, eventA, eventB):
+	def lookForCriticalIntervals(self, key):
 		""" Searches for critical intervals by considering intervals from distributionFirstSeen, and then calculates p-value using
 		both distributions according to t-pattern algorithm."""
 
-		T = self.totalTime
-		N_a = self.eventTypeCounts[eventA]
-		N_b = self.eventTypeCounts[eventB]
-		AnextB = self.eventDistributions['{0}-{1}'.format(eventA,eventB)]['AnextB']
-		AlaterB = self.eventDistributions['{0}-{1}'.format(eventA,eventB)]['AlaterB']
+		AnextB = self.eventDistributions[key]['AnextB']
 
 		for low in xrange(len(AnextB)):
 			for high in xrange(len(AnextB)-1, low, -1):
 
-				d1 = AnextB[low]
-				d2 = AnextB[high]
+				# print key
+				# print AnextB
+				
+				d1 = AnextB[low].timedelta
+				d2 = AnextB[high].timedelta
 
 				if d1 == d2:
 					continue
 
 				
-
-				N_ab = sum( 
-						map(lambda pair: all(pair), 
-							zip(map(lambda x: d1<=x, AnextB), 
-								map(lambda x: x<=d2, AnextB)))) #\
-						# + sum(
-						# map(lambda pair: all(pair),
-						# 	zip(map(lambda x: d1<=x, AlaterB),
-						# 		map(lambda x: x<=d2, AlaterB))))
-
+				# N_ab = sum( 
+				# 		map(lambda pair: all(pair), 
+				# 			zip(map(lambda x: d1<=x.timedelta, AnextB), 
+				# 				map(lambda x: x.timedelta<=d2, AnextB))))
 				
 
 				# the probability of an interval of (d1,d2) after an eventA to contain at least one eventB
-				prob = 1 - (1 - float(N_b) / float(T))**(d2-d1+1)
+				probs = [(interval.timedelta>=d1 and interval.timedelta<=d2,
+						  1 - (1 - float(interval.N_b) / float(interval.T))**(d2-d1+1))
+						  for interval in AnextB]
+				
+				clt_x = sum([x[0] for x in probs])
+				clt_mean = sum([x[1] for x in probs])
+				clt_variance = sum([x[1]*(1-x[1]) for x in probs])
+				p_value = 1 - norm.cdf( (clt_x-clt_mean)/math.sqrt(clt_variance) )
+
+				if len(probs)==clt_x:
+					p_value = reduce(lambda x,y: x*y, [prob[1] for prob in probs])
+
+				# print probs
+				# print clt_x
+				# print clt_mean
+				# print clt_variance
+				# print p_value
 
 				# the probability of observing N_ab intervals with at least one eventB, out of N_a trials
-				p_value = 1 - binom.cdf(N_ab, N_a, prob)
+				# p_value = 1 - binom.cdf(N_ab, N_a, prob)
 
 				
 				if p_value < .05:
-					self.tpatternsfound +=1
 					print
-					print "Distribution for {0}-{1}".format(eventA,eventB)
+					print "Distribution for {0}".format(key)
 					print AnextB
-					print "N_a: {0}, N_ab: {1}, prob: {2}, p_value: {3}".format(N_a, N_ab, prob, p_value)
+					print [interval.timedelta for interval in AnextB]
+					print [ (x,round(y,2)) for x,y in probs]
+					print "N_a: {0}, N_ab: {1}, p_value: {2}".format(len(probs), clt_x, p_value)
 					print "Critical interval (d1,d2): ({0}, {1})".format(d1, d2, p_value)
 					return (d1, d2)
 
@@ -159,7 +192,19 @@ class TPattern(object):
 
 
 
+class Interval(object):
+	def __init__(self, timedelta, N_b, T):
+		self.timedelta = timedelta
+		self.N_b = N_b
+		self.T = T
 
+	def __str__(self):
+		return repr(self)
+	def __repr__(self):
+		return "Interval({0},{1},{2})".format(self.timedelta, self.N_b, self.T)
+
+	def __lt__(self, other):
+		return self.timedelta < other.timedelta
 
 
 
