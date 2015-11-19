@@ -1,7 +1,7 @@
 import sys
 import shelve
 import datetime
-import MySQLdb
+#import MySQLdb
 import matplotlib.pyplot as plt
 import TPattern
 
@@ -46,8 +46,8 @@ def testEventsIterator(tpattern):
 	with open('fakedata.csv', 'r') as f:
 		for line in f:
 			events = line.strip().split(',')
-			events = map(lambda x: (x.split('-')[0], x.split('-')[1]), events)
-			events = map(lambda x: (datetime.datetime.strptime(x[0], "%Y/%m/%d %H:%M:%S"), x[1]), events)
+			events = map(lambda x: (datetime.datetime.strptime(x.split('-')[0], "%Y/%m/%d %H:%M:%S"), x.split('-')[1]), events)
+			events = map(lambda x: TPattern.Event(x[1], x[0], x[0]), events)
 			yield events
 
 def main(args):
@@ -59,16 +59,26 @@ def main(args):
 	tpattern = TPattern.TPattern()
 	#tpattern.setDB(DB, TABLE, dbCursor, EVENT_TYPE_COLUMN)
 
-	for events in testEventsIterator(tpattern):
-		tpattern.buildDistributions(events)
+	anotherLevelExists = True
+	while anotherLevelExists:
+		print "looping", tpattern.sub_patterns
+		anotherLevelExists = False
+
+		for observationPeriod in testEventsIterator(tpattern):
+			observationPeriod = tpattern.addTpatternsToObservationPeriod(observationPeriod)
+			tpattern.processObservationPeriod(observationPeriod)
+
+		anotherLevelExists = tpattern.processDistributions()
+		
+		tpattern.initializeDistributionDict()
 	
+	tpattern.completenessCompetition()
 	#for events in eventsIterator(tpattern):
 	#	tpattern.buildDistributions(events)
 		
 		
 
-	tpattern.processDistributions()
-
+	
 
 
 	print "\nFinished at {0}!".format(datetime.datetime.now())

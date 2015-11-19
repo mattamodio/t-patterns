@@ -41,7 +41,7 @@ class TPattern(object):
 
 		# for eventtype in self.dbCursor.fetchall():
 		# 	self.eventTypes.append(eventtype[0])
-		self.eventTypeCounts = {}
+
 		self.eventDistributions = {}
 		self.eventTypes = ['A','B','C','D','E']
 		for higher_order_pattern in self.sub_patterns:
@@ -57,12 +57,16 @@ class TPattern(object):
 				key = '{0}-{1}'.format(eventtype1,eventtype2)
 				self.eventDistributions[key] = []
 
+		# build skeleton for counts
+		for i in self.eventTypes:
+			self.eventTypeCounts[i] = 0
+
 	def processObservationPeriod(self, observationPeriod):
 		"""For one observation period, add N_b,T,interval for all event-type pairs to the appropriate distribution 
 		in the TPattern object. For each eventA, the next instance of each event type is considered an interval.
 		For each eventB, it is only considered an interval for the closest instance of each eventA."""
 		
-		self.totalTimeAndEventCountsForObservationPeriod(observationPeriod)
+		totalTime, eventTypeCounts = self.totalTimeAndEventCountsForObservationPeriod(observationPeriod)
 
 		# iterate over each event instance in reverse, to make sure you only consider the closest instance of eventA to eventB
 		eventPairsSeen = {}
@@ -82,7 +86,7 @@ class TPattern(object):
 					# get timedelta in between events in hours
 					timedelta = event2.first_timestamp - event1.last_timestamp
 					timedelta = int(timedelta.total_seconds()/(60*60))
-					interval = Interval(timedelta, self.eventTypeCounts[event2.eventtype], self.totalTime)
+					interval = Interval(timedelta, eventTypeCounts[event2.eventtype], totalTime)
 
 					bisect.insort(self.eventDistributions[key], interval)
 
@@ -99,11 +103,12 @@ class TPattern(object):
 		# get total time and event-type counts for this observation period
 		firstTime = None
 		lastTime = None
+		eventTypeCounts = {}
 		for event in observationPeriod:
-			if event.eventtype in self.eventTypeCounts:
-				self.eventTypeCounts[event.eventtype] +=1
+			if event.eventtype in eventTypeCounts:
+				eventTypeCounts[event.eventtype] +=1
 			else:
-				self.eventTypeCounts[event.eventtype] = 1
+				eventTypeCounts[event.eventtype] = 1
 		
 			if not firstTime or event.first_timestamp<firstTime:
 				firstTime = event.first_timestamp
@@ -113,7 +118,7 @@ class TPattern(object):
 		totalTime = lastTime - firstTime
 		totalTime = int(totalTime.total_seconds()/(60*60))
 
-		self.totalTime += totalTime
+		return totalTime, eventTypeCounts
 
 	def processDistributions(self):
 
@@ -122,7 +127,7 @@ class TPattern(object):
 
 			criticalInterval = self.lookForCriticalIntervals(key)
 			if criticalInterval:
-				s = Sub_Pattern(key.split('-')[0], key.split('-')[1], criticalInterval)
+				s = Sub_Pattern(key.split('-')[0], key.split('-')[1],criticalInterval)
 				if not s in self.sub_patterns:
 					self.sub_patterns.append(s)
 					found_at_least_one_pattern = True
@@ -134,7 +139,6 @@ class TPattern(object):
 		both distributions according to t-pattern algorithm."""
 
 		AnextB = self.eventDistributions[key]
-		eventA, eventB = key.split('-')
 
 		for low in xrange(len(AnextB)):
 			for high in xrange(len(AnextB)-1, low, -1):
@@ -145,33 +149,28 @@ class TPattern(object):
 				d1 = AnextB[low].timedelta
 				d2 = AnextB[high].timedelta
 
-				# if d1 == d2:
-				# 	continue
+				if d1 == d2:
+					continue
 
 				
-				N_ab = sum( 
-						map(lambda pair: all(pair), 
-							zip(map(lambda x: d1<=x.timedelta, AnextB), 
-								map(lambda x: x.timedelta<=d2, AnextB))))
-				N_a = self.eventTypeCounts[eventA]
-				N_b = self.eventTypeCounts[eventB]
-				T = self.totalTime
-
-
-				prob = 1 - (1 - N_b / float(T))**(d2-d1+1)
+				# N_ab = sum( 
+				# 		map(lambda pair: all(pair), 
+				# 			zip(map(lambda x: d1<=x.timedelta, AnextB), 
+				# 				map(lambda x: x.timedelta<=d2, AnextB))))
+				
 
 				# the probability of an interval of (d1,d2) after an eventA to contain at least one eventB
-				# probs = [(interval.timedelta>=d1 and interval.timedelta<=d2,
-				# 		  1 - (1 - float(interval.N_b) / float(interval.T))**(d2-d1+1))
-				# 		  for interval in AnextB]
+				probs = [(interval.timedelta>=d1 and interval.timedelta<=d2,
+						  1 - (1 - float(interval.N_b) / float(interval.T))**(d2-d1+1))
+						  for interval in AnextB]
 				
-				# clt_x = sum([x[0] for x in probs])
-				# clt_mean = sum([x[1] for x in probs])
-				# clt_variance = sum([x[1]*(1-x[1]) for x in probs])
-				# p_value = 1 - norm.cdf( (clt_x-clt_mean)/math.sqrt(clt_variance) )
+				clt_x = sum([x[0] for x in probs])
+				clt_mean = sum([x[1] for x in probs])
+				clt_variance = sum([x[1]*(1-x[1]) for x in probs])
+				p_value = 1 - norm.cdf( (clt_x-clt_mean)/math.sqrt(clt_variance) )
 
-				# if len(probs)==clt_x:
-				# 	p_value = reduce(lambda x,y: x*y, [prob[1] for prob in probs])
+				if len(probs)==clt_x:
+					p_value = reduce(lambda x,y: x*y, [prob[1] for prob in probs])
 
 				# print probs
 				# print clt_x
@@ -180,7 +179,7 @@ class TPattern(object):
 				# print p_value
 
 				# the probability of observing N_ab intervals with at least one eventB, out of N_a trials
-				p_value = 1 - binom.cdf(N_ab, N_a, prob)
+				# p_value = 1 - binom.cdf(N_ab, N_a, prob)
 
 				
 				if p_value < .05:
@@ -189,7 +188,8 @@ class TPattern(object):
 					# print AnextB
 					# print [interval.timedelta for interval in AnextB]
 					# print [ (x,round(y,2)) for x,y in probs]
-					print "N_a: {0}, N_ab: {1}, Critical interval: ({2}), P(success): {3:.4f}, p_value: {4:.4f}".format(N_a, N_ab, str((d1,d2)), prob, p_value)
+					print "N_a: {0}, N_ab: {1}, p_value: {2}".format(len(probs), clt_x, p_value)
+					print "Critical interval (d1,d2): ({0}, {1})".format(d1, d2, p_value)
 					return (d1, d2)
 
 
@@ -221,15 +221,7 @@ class TPattern(object):
 
 		return observationPeriod
 
-	def completenessCompetition(self):
 
-		for i in xrange(len(self.sub_patterns)):
-			sub_pattern = self.sub_patterns[i]
-			tmp = self.sub_patterns[:i] + self.sub_patterns[i+1:]
-			if any(map(lambda x: self.sub_patterns[i] in x, tmp)):
-				pass
-			else:
-				print self.sub_patterns[i]
 
 class Interval(object):
 	def __init__(self, timedelta, N_b, T):
@@ -281,23 +273,11 @@ class Sub_Pattern(object):
 
 	def __repr__(self):
 
-		return "({0} {1})".format(self.first_event_type, self.last_event_type)
+		return "({0}-{1})".format(self.first_event_type, self.last_event_type)
 
 	def __eq__(self, other):
 
 		return all([self.first_event_type==other.first_event_type, self.last_event_type==other.last_event_type])
-
-	def __contains__(self, item):
-		previousIndex = -1
-		for event_type in str(item).replace("(", "").replace(")", "").replace(" ", ""):
-			index = str(self).replace("(", "").replace(")", "").replace(" ", "")[previousIndex+1:].find(event_type)
-			if index == -1:
-				return False
-			previousIndex = index
-		if len(str(self)) == len(str(item)):
-			return False
-		else:
-			return True
 
 
 
