@@ -1,7 +1,7 @@
 import sys
 import shelve
 import datetime
-#import MySQLdb
+import MySQLdb
 import matplotlib.pyplot as plt
 import TPattern
 
@@ -47,32 +47,40 @@ def testEventsIterator(tpattern):
 		for line in f:
 			events = line.strip().split(',')
 			events = map(lambda x: (datetime.datetime.strptime(x.split('-')[0], "%Y/%m/%d %H:%M:%S"), x.split('-')[1]), events)
-			events = map(lambda x: TPattern.Event(x[1], x[0], x[0]), events)
-			yield events
+			events = map(lambda x: TPattern.EventInstance(TPattern.EventType(x[1], x[1]), x[0], x[0]), events)
+			observationPeriod = TPattern.ObservationPeriod(events)
+			yield observationPeriod
 
 def main(args):
 
 	# get things ready
 	print "Starting at {0}...\n".format(datetime.datetime.now())
 	
-	#dbCursor = establishDBconnection(DB)
+	dbCursor = establishDBconnection(DB)
 	tpattern = TPattern.TPattern()
-	#tpattern.setDB(DB, TABLE, dbCursor, EVENT_TYPE_COLUMN)
+	tpattern.setDB(DB, TABLE, dbCursor, EVENT_TYPE_COLUMN)
 
 	anotherLevelExists = True
 	while anotherLevelExists:
-		print "looping", tpattern.sub_patterns
+		print "Starting loop, tpatterns found: {0}".format(tpattern.t_patterns_found)
+
 		anotherLevelExists = False
 
 		for observationPeriod in testEventsIterator(tpattern):
 			observationPeriod = tpattern.addTpatternsToObservationPeriod(observationPeriod)
 			tpattern.processObservationPeriod(observationPeriod)
 
+
+		print "Event counts: {0}".format(tpattern.eventTypeCounts)
+		print
+		print
 		anotherLevelExists = tpattern.processDistributions()
 		
 		tpattern.initializeDistributionDict()
 	
 	tpattern.completenessCompetition()
+
+
 	#for events in eventsIterator(tpattern):
 	#	tpattern.buildDistributions(events)
 		
