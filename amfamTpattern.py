@@ -1,7 +1,7 @@
 import sys
 import shelve
 import datetime
-import MySQLdb
+#import MySQLdb
 import matplotlib.pyplot as plt
 import TPattern
 
@@ -56,13 +56,14 @@ def main(args):
 	# get things ready
 	print "Starting at {0}...\n".format(datetime.datetime.now())
 	
-	dbCursor = establishDBconnection(DB)
+	#cledbCursor = establishDBconnection(DB)
 	tpattern = TPattern.TPattern()
-	tpattern.setDB(DB, TABLE, dbCursor, EVENT_TYPE_COLUMN)
+	#tpattern.setDB(DB, TABLE, dbCursor, EVENT_TYPE_COLUMN)
 
 	anotherLevelExists = True
 	while anotherLevelExists:
-		print "Starting loop, tpatterns found: {0}".format(tpattern.t_patterns_found)
+		print "\nStarting loop, tpatterns found: {0}".format(tpattern.t_patterns_found)
+
 
 		anotherLevelExists = False
 
@@ -70,23 +71,12 @@ def main(args):
 			observationPeriod = tpattern.addTpatternsToObservationPeriod(observationPeriod)
 			tpattern.processObservationPeriod(observationPeriod)
 
-
-		print "Event counts: {0}".format(tpattern.eventTypeCounts)
-		print
-		print
+		#print "Event distributions: {0}".format(tpattern.eventDistributions.keys())
+		#print "Event counts: {0}\n".format(tpattern.eventTypeCounts)
 		anotherLevelExists = tpattern.processDistributions()
 		
-		tpattern.initializeDistributionDict()
 	
 	tpattern.completenessCompetition()
-
-
-	#for events in eventsIterator(tpattern):
-	#	tpattern.buildDistributions(events)
-		
-		
-
-	
 
 
 	print "\nFinished at {0}!".format(datetime.datetime.now())
