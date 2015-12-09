@@ -1,83 +1,17 @@
-Starting at 2015-12-05 14:06:47.359436...
+Starting at 2015-12-09 02:52:40.679479...
 
 
 Starting loop, tpatterns found: []
-Processing distribution (A E)
-Processing distribution (D E)
-Processing distribution (C D)
-Processing distribution (A C)
-Processing distribution (A A)
-Processing distribution (D C)
-Processing distribution (B B)
-Processing distribution (D A)
-Processing distribution (E A)
-Processing distribution (B E)
-Processing distribution (E E)
-Processing distribution (E C)
-Processing distribution (C B)
-Processing distribution (A D)
-Processing distribution (D D)
-Processing distribution (A B)
-Processing distribution (C E)
-Processing distribution (D B)
-Processing distribution (B C)
-Processing distribution (B D)
-Processing distribution (E D)
-Processing distribution (E B)
-Processing distribution (C A)
-Processing distribution (C C)
 
-Starting loop, tpatterns found: [(C 11,13 D), (A 4,6 A), (C 2,4 E), (E 8,10 D)]
-Processing distribution ((C 2,4 E) C)
-Processing distribution ((A 4,6 A) B)
-Processing distribution ((C 11,13 D) (A 4,6 A))
-Processing distribution ((A 4,6 A) D)
-Processing distribution (A (C 2,4 E))
-Processing distribution (D (C 11,13 D))
-Processing distribution (D (A 4,6 A))
-Processing distribution ((E 8,10 D) A)
-Processing distribution (A (E 8,10 D))
-Processing distribution (C (A 4,6 A))
-Processing distribution (E (E 8,10 D))
-Processing distribution (E (A 4,6 A))
-Processing distribution ((E 8,10 D) C)
-Processing distribution ((C 2,4 E) A)
-Processing distribution ((C 11,13 D) A)
-Processing distribution ((C 2,4 E) B)
-Processing distribution (B (C 11,13 D))
-Processing distribution ((A 4,6 A) (E 8,10 D))
-Processing distribution ((A 4,6 A) A)
-Processing distribution ((C 2,4 E) D)
-Processing distribution ((A 4,6 A) C)
-Processing distribution (E (C 11,13 D))
-Processing distribution (B (C 2,4 E))
-Processing distribution ((C 2,4 E) (A 4,6 A))
-Processing distribution (E (C 2,4 E))
-Processing distribution ((A 4,6 A) E)
-Processing distribution (D (C 2,4 E))
-Processing distribution (D (E 8,10 D))
-Processing distribution ((A 4,6 A) (C 2,4 E))
-Processing distribution ((E 8,10 D) B)
-Processing distribution (C (E 8,10 D))
-Processing distribution ((C 11,13 D) B)
-Processing distribution ((E 8,10 D) (A 4,6 A))
-Processing distribution (B (E 8,10 D))
+Considering completeness of (C D): Not complete
+Considering completeness of (C (E D)): Skipping tie with ((C E) D)
+Considering completeness of (A A): Complete
+Considering completeness of (C E): Not complete
+Considering completeness of (E D): Not complete
+Considering completeness of ((C E) D): Complete
 
-Starting loop, tpatterns found: [(C 11,13 D), (A 4,6 A), (C 2,4 E), (E 8,10 D), ((C 2,4 E) 8,10 D), (C 2,4 (E 8,10 D))]
-Processing distribution (D (C 2,4 (E 8,10 D)))
-Processing distribution ((A 4,6 A) ((C 2,4 E) 8,10 D))
-Processing distribution (A (C 2,4 (E 8,10 D)))
-Processing distribution ((C 2,4 (E 8,10 D)) A)
-Processing distribution (E (C 2,4 (E 8,10 D)))
-Processing distribution ((C 2,4 (E 8,10 D)) B)
-Processing distribution ((A 4,6 A) (C 2,4 (E 8,10 D)))
-Processing distribution (((C 2,4 E) 8,10 D) C)
-Processing distribution ((C 2,4 (E 8,10 D)) (A 4,6 A))
-Processing distribution (A ((C 2,4 E) 8,10 D))
-Processing distribution ((C 2,4 (E 8,10 D)) C)
-Processing distribution (B (C 2,4 (E 8,10 D)))
+Complete patterns:
+(A A)
+((C E) D)
 
-(A 4,6 A)
-((C 2,4 E) 8,10 D)
-
-Finished at 2015-12-05 14:06:47.471699!
+Finished at 2015-12-09 02:52:40.734164!

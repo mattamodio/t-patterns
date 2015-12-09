@@ -12,7 +12,6 @@ EVENT_TYPE_COLUMN = 'eventtype'
 ROWS = 170160
 
 
-
 def establishDBconnection(dbName):
     '''
     Establishes connection to DB, turns on autocommit, and gets all of the column names from the table and puts them
@@ -30,25 +29,32 @@ def establishDBconnection(dbName):
 def eventsIterator(tpattern):
 
 	# find out how many observations there are
-	tpattern.dbCursor.execute( "SELECT MAX(claimnumber) FROM copy")
+	tpattern.dbCursor.execute( "SELECT MAX(claimnumber) FROM {0}".format(TABLE))
 	numberOfObservationPeriods = tpattern.dbCursor.fetchall()[0][0]
 
 	# query one observation period at a time
-	observationPeriod = 1
-	while observationPeriod <= numberOfObservationPeriods:
-		q = "SELECT ts,eventtype FROM copy WHERE claimnumber={0}".format(observationPeriod)
+	row_count = 1
+	while row_count <= numberOfObservationPeriods:
+		q = "SELECT id,ts,eventtype FROM {0} WHERE claimnumber={1}".format(TABLE, row_count)
 		tpattern.dbCursor.execute(q)
 		events = tpattern.dbCursor.fetchall()
-		observationPeriod +=1
-		yield events
+		events = map(lambda x: TPattern.EventInstance(TPattern.EventType(name=x[2]), x[0], x[1], x[1]), events)
+		observationPeriod = ObservationPeriod(events)
+		row_count +=1
+		yield observationPeriod
 
 def testEventsIterator(tpattern):
 	with open('fakedata.csv', 'r') as f:
+		eventID = 1
 		for line in f:
+			observationPeriod = TPattern.ObservationPeriod()
 			events = line.strip().split(',')
-			events = map(lambda x: (datetime.datetime.strptime(x.split('-')[0], "%Y/%m/%d %H:%M:%S"), x.split('-')[1]), events)
-			events = map(lambda x: TPattern.EventInstance(TPattern.EventType(x[1], x[1]), x[0], x[0]), events)
-			observationPeriod = TPattern.ObservationPeriod(events)
+			for event in events:
+				time, event_type = event.split('-')
+				time = datetime.datetime.strptime(time, "%Y/%m/%d %H:%M:%S")
+				event = TPattern.EventInstance(TPattern.EventType(name=event_type), eventID, time, time)
+				observationPeriod.addEvent(event)
+				eventID+=1
 			yield observationPeriod
 
 def main(args):
@@ -56,25 +62,18 @@ def main(args):
 	# get things ready
 	print "Starting at {0}...\n".format(datetime.datetime.now())
 	
-	#cledbCursor = establishDBconnection(DB)
+	
 	tpattern = TPattern.TPattern()
+	#dbCursor = establishDBconnection(DB)
 	#tpattern.setDB(DB, TABLE, dbCursor, EVENT_TYPE_COLUMN)
 
-	anotherLevelExists = True
-	while anotherLevelExists:
-		print "\nStarting loop, tpatterns found: {0}".format(tpattern.t_patterns_found)
+	print "\nStarting loop, tpatterns found: {0}".format(tpattern.t_patterns_found)
 
 
-		anotherLevelExists = False
+	for observationPeriod in testEventsIterator(tpattern):
+		tpattern.processObservationPeriod(observationPeriod)
 
-		for observationPeriod in testEventsIterator(tpattern):
-			observationPeriod = tpattern.addTpatternsToObservationPeriod(observationPeriod)
-			tpattern.processObservationPeriod(observationPeriod)
-
-		#print "Event distributions: {0}".format(tpattern.eventDistributions.keys())
-		#print "Event counts: {0}\n".format(tpattern.eventTypeCounts)
-		anotherLevelExists = tpattern.processDistributions()
-		
+	tpattern.processDistributions()
 	
 	tpattern.completenessCompetition()
 
