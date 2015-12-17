@@ -103,21 +103,22 @@ class TPattern(object):
 		return eventTypeCounts, totalTime
 
 	def processDistributions(self):
-
+		event_types_found = []
+		distributionsCheckedForIntervals = set()
 		found_at_least_one_tpattern = True
 		while found_at_least_one_tpattern:
 			found_at_least_one_tpattern = False
-			event_types_found = []
+			
 			#print "\nStarting loop"
 
 			for event_type in self.eventDistributions:
+				
 				if event_type in self.distributionsProcessed:
 					continue
 				else:
-					found_at_least_one_tpattern = True
 					self.distributionsProcessed.add(event_type)
 
-				#print "Processing distribution {0}".format(event_type)
+				print "Processing distribution {0}".format(event_type)
 
 				N_a, criticalInterval = self.lookForCriticalIntervals(event_type)
 				if criticalInterval:
@@ -126,13 +127,20 @@ class TPattern(object):
 					self.eventTypes.add(e)
 					event_types_found.append(e)
 
-					#print "Found tpattern {0}".format(e)
+					print "Found tpattern {0}".format(e)
 
 			#print "Finished looking for distributions. Found: {0}\n".format(event_types_found)
 
 			newDistributions = []
 			for event_type_to_add in event_types_found:
+				#print "Looking for candidate event types to process next time for: {0}".format(event_type_to_add)
 				for event_type2 in self.eventDistributions:
+
+					if (event_type_to_add,event_type2) in distributionsCheckedForIntervals:
+						continue
+					else:
+						found_at_least_one_tpattern = True
+						distributionsCheckedForIntervals.add((event_type_to_add,event_type2))
 
 					# consider time from new event type to the next of each other event type
 					if event_type_to_add.last_event_type==event_type2.first_event_type:
@@ -147,14 +155,14 @@ class TPattern(object):
 						e2 = EventType(first_event_type=event_type2.first_event_type, last_event_type=event_type_to_add)
 						newDistribution = self.createDistributionForNewEventType(event_type_to_add, event_type_to_add.critical_interval, event_type2, 'last')
 						if newDistribution:
-							#print "Will look next time for: {0}".format(e2)
+							#print "Will look next time at: {0}, {1}".format(e2, newDistribution)
 							newDistributions.append( (e2,newDistribution) )
 
 
 			for e2, newDistribution in newDistributions:
 				self.eventDistributions[e2] = newDistribution
 			
-		#print "Done processing distributions.\n"
+			print "Done processing distributions.\n"
 
 		# for _ in self.eventDistributions:
 		# 	print _, self.eventDistributions[_]
@@ -193,15 +201,17 @@ class TPattern(object):
 				intervals = [(interval.timedelta>=d1 and interval.timedelta<=d2,
 						  1 - (1 - float(interval.N_b) / float(interval.T))**(d2-d1+1))
 						  for interval in AnextB]
+
 				
 				prob = sum([p[1] for p in intervals]) / len(intervals)
 				N_ab = sum([interval[0] for interval in intervals])
 
 				# the probability of observing at least N_ab intervals with at least one eventB, out of N_a trials
 				p_value = 1 - binom.cdf(max(0,N_ab-1), N_a, prob)
+				#p_value = 1 - binom.cdf(max(0,N_ab-1), len(intervals), prob)
 
 				
-				if p_value < .005:
+				if p_value < .05:
 					#print "\nDistribution for {0}".format(event_type)
 					#print "N_a: {0}, N_ab: {1}, Critical interval: ({2}), P(success): {3:.4f}, p_value: {4:.4f}\n".format(N_a, N_ab, str((d1,d2)), prob, p_value)
 					return N_ab, (d1, d2)
@@ -215,15 +225,15 @@ class TPattern(object):
 				for interval2 in self.eventDistributions[event_type2]:
 
 					# considering candidate event types where the new event type is first
-					if new_type_first_or_last == 'first':
-						condition = interval1.last_event_id == interval2.first_event_id
-					# considering candidate event types where the new event type is last
-					if new_type_first_or_last == 'last':
-						condition = interval2.last_event_id == interval1.first_event_id
-
-					if condition:
+					if new_type_first_or_last == 'first' and interval1.last_event_id == interval2.first_event_id:
 						new_interval = Interval(interval2.timedelta, interval1.first_event_id, interval2.last_event_id, interval2.N_b, interval2.T)
 						bisect.insort(intervals, new_interval)
+
+					# considering candidate event types where the new event type is last
+					if new_type_first_or_last == 'last' and interval2.last_event_id == interval1.first_event_id:
+						new_interval = Interval(interval2.timedelta, interval2.first_event_id, interval1.last_event_id, interval1.N_b, interval2.T)
+						bisect.insort(intervals, new_interval)
+						
 
 		return intervals
 

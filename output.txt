@@ -1,17 +1,188 @@
-Starting at 2015-12-09 02:52:40.679479...
+Starting at 2015-12-09 13:08:38.057074...
 
 
 Starting loop, tpatterns found: []
+Processing distribution (A E)
+Processing distribution (D E)
+Processing distribution (C D)
+Found tpattern (C D)
+Processing distribution (A C)
+Processing distribution (A A)
+Found tpattern (A A)
+Processing distribution (D C)
+Processing distribution (B B)
+Processing distribution (D A)
+Processing distribution (E A)
+Processing distribution (B E)
+Processing distribution (E E)
+Processing distribution (E C)
+Found tpattern (E C)
+Processing distribution (C B)
+Processing distribution (A D)
+Processing distribution (D D)
+Processing distribution (A B)
+Processing distribution (C E)
+Found tpattern (C E)
+Processing distribution (D B)
+Processing distribution (B C)
+Found tpattern (B C)
+Processing distribution (B D)
+Found tpattern (B D)
+Processing distribution (E D)
+Found tpattern (E D)
+Processing distribution (E B)
+Processing distribution (C A)
+Processing distribution (C C)
+Done processing distributions.
 
+Processing distribution (E (E D))
+Processing distribution ((C D) E)
+Found tpattern ((C D) E)
+Processing distribution ((A A) E)
+Processing distribution ((B C) B)
+Found tpattern ((B C) B)
+Processing distribution (D (E C))
+Processing distribution ((C D) A)
+Processing distribution (E (B D))
+Processing distribution ((E D) A)
+Processing distribution ((B C) D)
+Found tpattern ((B C) D)
+Processing distribution (B (E D))
+Found tpattern (B (E D))
+Processing distribution (E (C D))
+Processing distribution (E (A A))
+Processing distribution ((C E) C)
+Processing distribution ((C E) A)
+Processing distribution ((B C) E)
+Found tpattern ((B C) E)
+Processing distribution ((E D) B)
+Processing distribution ((E D) C)
+Processing distribution (C (E D))
+Found tpattern (C (E D))
+Processing distribution ((A A) A)
+Processing distribution ((E C) B)
+Found tpattern ((E C) B)
+Processing distribution ((C D) D)
+Processing distribution ((A A) B)
+Processing distribution ((A A) D)
+Processing distribution ((E C) E)
+Found tpattern ((E C) E)
+Processing distribution ((C E) D)
+Found tpattern ((C E) D)
+Processing distribution (D (A A))
+Processing distribution ((C D) B)
+Processing distribution ((B D) B)
+Found tpattern ((B D) B)
+Processing distribution (C (A A))
+Processing distribution (A (C E))
+Processing distribution (A (E D))
+Processing distribution (E (B C))
+Processing distribution (A (E C))
+Processing distribution ((C E) B)
+Processing distribution (B (C E))
+Processing distribution ((E C) D)
+Found tpattern ((E C) D)
+Processing distribution ((A A) C)
+Processing distribution (B (C D))
+Found tpattern (B (C D))
+Processing distribution (A (C D))
+Processing distribution (D (C E))
+Done processing distributions.
+
+Processing distribution (((C E) D) C)
+Processing distribution ((A A) (C E))
+Processing distribution (((E C) E) D)
+Found tpattern (((E C) E) D)
+Processing distribution ((C E) (A A))
+Processing distribution ((C D) (E D))
+Processing distribution (((E C) E) B)
+Found tpattern (((E C) E) B)
+Processing distribution (E (B (E D)))
+Processing distribution ((A A) (E C))
+Processing distribution ((C D) (E C))
+Processing distribution (((C D) E) D)
+Found tpattern (((C D) E) D)
+Processing distribution ((B C) (E D))
+Found tpattern ((B C) (E D))
+Processing distribution ((A A) (E D))
+Processing distribution (B (C (E D)))
+Found tpattern (B (C (E D)))
+Processing distribution ((A A) (C D))
+Processing distribution (A (C (E D)))
+Processing distribution (E (C (E D)))
+Processing distribution (((B C) E) B)
+Found tpattern (((B C) E) B)
+Processing distribution ((C D) (A A))
+Processing distribution (((B C) D) B)
+Found tpattern (((B C) D) B)
+Processing distribution ((A A) (C (E D)))
+Processing distribution (((C E) D) A)
+Processing distribution (((C D) E) C)
+Found tpattern (((C D) E) C)
+Processing distribution (D (C (E D)))
+Processing distribution (((C E) D) B)
+Processing distribution ((A A) (A A))
+Processing distribution (((E C) D) B)
+Found tpattern (((E C) D) B)
+Processing distribution (((C E) D) (A A))
+Processing distribution (E (B (C D)))
+Processing distribution ((E C) (E D))
+Found tpattern ((E C) (E D))
+Processing distribution ((E D) (A A))
+Processing distribution (((B C) E) D)
+Found tpattern (((B C) E) D)
+Done processing distributions.
+
+Processing distribution ((((E C) E) D) B)
+Found tpattern ((((E C) E) D) B)
+Processing distribution ((((B C) E) D) B)
+Found tpattern ((((B C) E) D) B)
+Processing distribution (E (B (C (E D))))
+Processing distribution ((((C D) E) D) C)
+Found tpattern ((((C D) E) D) C)
+Done processing distributions.
+
+Done processing distributions.
+
+
+Considering completeness of ((C D) E): Not complete
+Considering completeness of ((B C) B): Not complete
 Considering completeness of (C D): Not complete
-Considering completeness of (C (E D)): Skipping tie with ((C E) D)
+Considering completeness of ((((E C) E) D) B): Complete
+Considering completeness of (((E C) E) B): Not complete
 Considering completeness of (A A): Complete
+Considering completeness of ((E C) D): Not complete
+Considering completeness of ((B C) D): Not complete
+Considering completeness of (B (E D)): Not complete
+Considering completeness of (((E C) E) D): Not complete
+Considering completeness of ((((C D) E) D) C): Complete
+Considering completeness of (((C D) E) C): Not complete
+Considering completeness of ((E C) B): Not complete
+Considering completeness of (E C): Not complete
+Considering completeness of ((((B C) E) D) B): Complete
+Considering completeness of (((C D) E) D): Not complete
+Considering completeness of ((B C) (E D)): Not complete
+Considering completeness of ((E C) E): Not complete
 Considering completeness of (C E): Not complete
+Considering completeness of ((B D) B): Not complete
+Considering completeness of (((B C) E) B): Not complete
+Considering completeness of (B C): Not complete
+Considering completeness of ((B C) E): Not complete
+Considering completeness of (B D): Not complete
+Considering completeness of (((B C) D) B): Not complete
+Considering completeness of (C (E D)): Not complete
+Considering completeness of ((E C) (E D)): Not complete
 Considering completeness of (E D): Not complete
-Considering completeness of ((C E) D): Complete
+Considering completeness of (B (C (E D))): Not complete
+Considering completeness of (((E C) D) B): Not complete
+Considering completeness of (B (C D)): Not complete
+Considering completeness of (((B C) E) D): Not complete
+Considering completeness of ((C E) D): Not complete
 
 Complete patterns:
+((((E C) E) D) B)
 (A A)
-((C E) D)
+((((C D) E) D) C)
+((((B C) E) D) B)
 
-Finished at 2015-12-09 02:52:40.734164!
+Finished at 2015-12-09 13:08:38.196725!
