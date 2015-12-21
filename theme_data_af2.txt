@@ -1,0 +1,305 @@
+Outbound,0
+ClaimReported,0
+Outbound,0
+Claim Activity Log,0
+Claim Activity Log,0
+AssRouteToOffice,2
+ClaimSetup,2
+RouteToInbox,2
+IsoMatchRpt,2
+AssToFileHandler,3
+AssToFileHandler,3
+ReviewRemFromInbox,4
+Suspended Item,4
+Claim Activity Log,5
+Claim Activity Log,5
+Claim Activity Log,6
+PerilActivity,6
+COPSCarAsgSentPDR,6
+Vehicle,6
+Claim Activity Log,6
+RefSentPDVE,70
+Referral,70
+Suspended Item,70
+Vehicle,82
+AudatexReceipt,96
+VehicleEdited,96
+RefCompPDVE,96
+Referral,96
+Unsuspended Item,711
+Claim Activity Log,745
+ClaimEdited,745
+PerilActivity,745
+ClaimClosed,745
+Inbound,0
+Inbound,0
+ClaimReported,0
+ClaimSetup,0
+AssRouteToOffice,0
+IsoMatchRpt,0
+RouteToInbox,0
+PerilActivity,0
+ClaimEdited,0
+Initial Contact,0
+Vehicle,0
+PartyAdded,0
+PartyEdited,0
+Vehicle,0
+AssToFileHandler,0
+COPSCarAsgSentPDR,0
+Vehicle,0
+Liability Analysis,0
+ReviewRemFromInbox,0
+Claim Activity Log,0
+ClaimEdited,2
+Outbound,2
+RefSentPDVE,2
+Suspended Item,2
+Referral,2
+Claim Activity Log,2
+Suspense,2
+Suspended Item,2
+Vehicle,5
+Rental,24
+FYISent,24
+AudatexReceipt,24
+VehicleEdited,24
+RefCompPDVE,24
+Referral,24
+Unsuspended Item,61
+PartyEdited,70
+Claim Activity Log,70
+PerilActivity,70
+ClaimClosed,70
+Inbound,0
+Inbound,0
+ClaimReported,0
+AssRouteToOffice,0
+ClaimSetup,0
+IsoMatchRpt,0
+RouteToInbox,0
+AssToFileHandler,0
+Initial Contact,0
+Subrogation,0
+Claim Activity Log,0
+PartyEdited,0
+COPSCarAsgSentPDR,0
+Claim Activity Log,0
+ReviewRemFromInbox,1
+Referral,2
+RefSentPDVE,2
+Suspended Item,2
+PerilActivity,3
+Vehicle,3
+Referral,4
+RefRespPDVE,4
+Claim Activity Log,6
+Claim Activity Log,6
+ClaimEdited,6
+Claim Activity Log,6
+AudatexReceipt,47
+VehicleEdited,47
+ClaimEdited,74
+Claim Activity Log,74
+ClaimEdited,74
+VehicleEdited,74
+PerilActivity,74
+ClaimClosed,74
+DocAddInProgress,154
+DocAddInProgress,154
+Document Added,154
+DocAddInProgress,154
+Document Added,154
+Vehicle,168
+AudatexReceipt,175
+Vehicle,293
+DocAddInProgress,293
+Document Added,293
+AudatexReceipt,310
+Claim Activity Log,6146
+ClaimReopened,6146
+VehicleEdited,6146
+PerilActivity,6146
+ClaimClosed,6146
+Claim Activity Log,0
+ClaimReported,0
+ClaimSetup,0
+AssToFileHandler,0
+IsoNoMatchRpt,0
+Initial Contact,0
+Vehicle,0
+Liability Analysis,0
+Vehicle,0
+COPSCarAsgSentPDR,0
+Vehicle,0
+Vehicle,0
+Suspended Item,0
+Suspense,0
+ClaimEdited,0
+PerilActivity,0
+Referral,2
+RefSentPDVE,2
+Suspended Item,2
+Vehicle,20
+Unsuspended Item,35
+Suspended Item,46
+Suspense,46
+Unsuspended Item,131
+Suspended Item,140
+Unsuspended Item,179
+Vehicle,187
+recordManualPymt,187
+FYISent,187
+AudatexReceipt,187
+VehicleEdited,187
+RefCompPDVE,187
+Referral,187
+MultDocAddBegin,188
+MultipleDocAdded,188
+Outbound,190
+Claim Activity Log,190
+Suspended Item,190
+Suspense,190
+Unsuspended Item,227
+Claim Activity Log,242
+PerilActivity,242
+ClaimClosed,242
+ClaimReported,0
+ClaimSetup,0
+AssToFileHandler,0
+COPSCarAsgSentCRP,0
+IsoMatchRpt,0
+RouteToInbox,0
+PartyEdited,0
+VehicleEdited,0
+ClaimEdited,0
+Initial Contact,0
+PartyEdited,0
+Claim Activity Log,0
+ClaimEdited,0
+PerilActivity,0
+PerilActivity,0
+Liability Analysis,0
+Vehicle,0
+Claim Activity Log,0
+Vehicle,0
+Rental,0
+Correspondenc sent,0
+Outbound,0
+PartyEdited,0
+Claim Activity Log,0
+Claim Activity Log,0
+Suspended Item,0
+Suspense,0
+Vehicle,4
+ReviewRemFromInbox,5
+Vehicle,25
+AudatexReceipt,38
+VehicleEdited,38
+Vehicle,38
+PartyEdited,47
+Claim Activity Log,47
+Claim Activity Log,47
+Suspended Item,47
+Suspense,47
+Claim Activity Log,52
+VehicleEdited,52
+Unsuspended Item,62
+Claim Activity Log,70
+Claim Activity Log,70
+Claim Activity Log,70
+Outbound,70
+Claim Activity Log,70
+Suspended Item,70
+Suspense,70
+Inbound,74
+Inbound,74
+Outbound,78
+Claim Activity Log,78
+Inbound,192
+Inbound,192
+Inbound,192
+Inbound,192
+Inbound,192
+Inbound,192
+Inbound,192
+Claim Activity Log,193
+Unsuspended Item,206
+Rental,213
+Suspense,218
+Suspended Item,218
+Vehicle,245
+Claim Activity Log,312
+Outbound,316
+Claim Activity Log,316
+Suspended Item,316
+Suspense,316
+AudatexReceipt,316
+Vehicle,317
+Vehicle,317
+Vehicle,335
+Vehicle,360
+Vehicle,364
+Vehicle,366
+AudatexReceipt,366
+Outbound,389
+Claim Activity Log,389
+Unsuspended Item,398
+grpPymtSubmit,404
+DocAddInProgress,405
+Document Added,405
+Claim Activity Log,407
+Suspended Item,407
+Suspense,407
+Claim Activity Log,407
+makePaymentSubmit,475
+Correspondenc sent,475
+FYISent,475
+Vehicle,475
+Unsuspended Item,494
+PartyEdited,506
+Vehicle,506
+Claim Activity Log,506
+Claim Activity Log,506
+Claim Activity Log,506
+Suspended Item,507
+Unsuspended Item,542
+Claim Activity Log,555
+Suspended Item,555
+Unsuspended Item,638
+Claim Activity Log,648
+Suspended Item,648
+Suspense,648
+Unsuspended Item,710
+Suspended Item,725
+Suspense,725
+Receipt Item,874
+Unsuspended Item,878
+AssociatedToClaim,888
+AssociatedToParty,888
+RouteToInbox,888
+RefSentPD,888
+Referral,888
+ReviewRemFromInbox,888
+Suspense,893
+Suspended Item,893
+Unsuspended Item,974
+Reason for Escalation,1008
+FYISent,1008
+AssReRouteQueue,1010
+Claim Activity Log,1010
+AssToFileHandler,1010
+Claim Activity Log,1011
+Claim Activity Log,1011
+Suspended Item,1011
+makePaymentSubmit,1011
+Claim Activity Log,1011
+Contact,1011
+ClaimEdited,1011
+RefRespPD,1296
+Referral,1296
+RefRemFromInbox,1316
+Unsuspended Item,1334
+PerilActivity,1346
+PerilActivity,1346
+ClaimClosed,1346

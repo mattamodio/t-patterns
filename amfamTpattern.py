@@ -11,6 +11,45 @@ TABLE = 'copy'
 EVENT_TYPE_COLUMN = 'eventtype'
 ROWS = 170160
 
+import csv
+
+CSV_FILE = '/Users/matthewamodio/Desktop/claim_events.csv'
+
+def wholeCsvIterator(tpattern, limit=None):
+	with open(CSV_FILE, 'r') as f:
+		reader = csv.reader(f)
+		reader.next()
+
+		if limit:
+			counter=0
+
+		
+		event_id, claimnumber, timestamp, _,eventtype = reader.next()[:5]
+		timestamp = datetime.datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S")
+		event = TPattern.EventInstance(TPattern.EventType(name=eventtype), event_id, timestamp, timestamp)
+		events = [event]
+		prev_claimnumber = claimnumber
+
+		for row in reader:
+			event_id, claimnumber, timestamp, _,eventtype = row[:5]
+			timestamp = datetime.datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S")
+			event = TPattern.EventInstance(TPattern.EventType(name=eventtype), event_id, timestamp, timestamp)
+
+			if prev_claimnumber==claimnumber:
+				events.append(event)
+			else:
+				observationPeriod = TPattern.ObservationPeriod(events)
+				yield observationPeriod
+				events = []
+
+
+				if limit:
+					counter+=1
+					if counter % 1 == 0: print "Processing observation {0}".format(counter)
+					if counter>= limit:
+						break
+
+			prev_claimnumber = claimnumber
 
 def establishDBconnection(dbName):
     '''
@@ -67,10 +106,10 @@ def main(args):
 	#dbCursor = establishDBconnection(DB)
 	#tpattern.setDB(DB, TABLE, dbCursor, EVENT_TYPE_COLUMN)
 
-	print "\nStarting loop, tpatterns found: {0}".format(tpattern.t_patterns_found)
+	#print "\nStarting loop, tpatterns found: {0}".format(tpattern.t_patterns_found)
 
 
-	for observationPeriod in testEventsIterator(tpattern):
+	for observationPeriod in wholeCsvIterator(tpattern, limit=100):
 		tpattern.processObservationPeriod(observationPeriod)
 
 	for key in tpattern.t_patterns_found:

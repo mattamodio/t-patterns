@@ -127,7 +127,7 @@ class TPattern(object):
 			found_at_least_one_tpattern = False
 			count_of_patterns_found = len(event_types_found)
 			
-			#print "\n" + "-"*50 + "\nStarting loop"
+			print "\n" + "-"*50 + "\nStarting loop"
 
 			for event_type_string in self.eventTypes:
 				if self.eventTypes[event_type_string].baseEventType:
@@ -151,7 +151,7 @@ class TPattern(object):
 
 					#print "Found tpattern {0}".format(e)
 
-			#print "Finished looking for distributions. Found: {0}".format(len(event_types_found) - count_of_patterns_found)
+			print "Finished looking for distributions. Found: {0}".format(len(event_types_found) - count_of_patterns_found)
 
 			newDistributions = []
 			for event_type_to_add in event_types_found[count_of_patterns_found:]:
@@ -190,7 +190,7 @@ class TPattern(object):
 				self.eventDistributions[str(e2)] = newDistribution
 				self.eventTypes[str(e2)] = e2
 			
-			#print "Done processing this round of distributions.\n" + "-"*50 + "\n"
+			print "Done processing this round of distributions.\n" + "-"*50 + "\n"
 
 
 		return event_types_found
@@ -236,7 +236,7 @@ class TPattern(object):
 				#p_value = 1 - binom.cdf(max(0,N_ab-1), len(intervals), prob)
 
 				
-				if p_value < .03:
+				if p_value < .00001:
 					#print "\nDistribution for {0}".format(event_type)
 					#print "N_a: {0}, N_ab: {1}, Critical interval: ({2}), P(success): {3:.4f}, p_value: {4:.4f}\n".format(N_a, N_ab, str((d1,d2)), prob, p_value)
 					return N_ab, (d1, d2)
@@ -385,6 +385,7 @@ class EventType(object):
 
 	def __contains__(self, item):
 
+
 		myEvents = self.getListOfEvents()
 		othersEvents = item.getListOfEvents()
 
@@ -394,10 +395,14 @@ class EventType(object):
 		j=0
 		for otherEvent in othersEvents:
 			if otherEvent in myEvents[j:]:
-				j+= myEvents.index(otherEvent)
+				j+= myEvents.index(otherEvent)+1
 			else:
 				return False
-		return True
+
+		if j+1<len(myEvents):
+			return False
+		else:
+			return True
 
 	def __hash__(self):
 
