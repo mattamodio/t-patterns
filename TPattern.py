@@ -6,15 +6,11 @@ from scipy.stats import binom, norm
 class TPattern(object):
 	def __init__(self):
 		self.eventTypes = {}
-		self.t_patterns_found = []
-		self.eventTypeCounts = {}
+		self.t_patterns_found = {}
 		self.totalTime = 0
 		self.distributionsProcessed = set()
 		self.eventTypeCounts = {}
 		self.eventDistributions = {}
-
-		import shelve
-		self.eventDistributions = shelve.open('eventDistributions.so', writeback=True)
 
 		# query = "SELECT DISTINCT {0} \
 		# 		 FROM {1} \
@@ -76,6 +72,25 @@ class TPattern(object):
 				else:
 					eventPairsSeen[event_type] = [(event_instance1.last_timestamp,event_instance2.first_timestamp)]
 
+
+		event_types_found = self.processDistributions()
+
+		for event_type_found in event_types_found:
+			if not event_type_found in self.t_patterns_found:
+				self.t_patterns_found[event_type_found] = 1
+			else:
+				self.t_patterns_found[event_type_found] +=1
+
+		#print self.t_patterns_found
+
+
+		self.eventTypeCounts = {}
+		self.eventDistributions = {}
+		self.eventTypes = {}
+		self.distributionsProcessed = set()
+
+		#sys.exit()
+
 	def totalTimeAndEventCountsForObservationPeriod(self, observationPeriod):
 
 		# get total time and event-type counts for this observation period
@@ -112,7 +127,7 @@ class TPattern(object):
 			found_at_least_one_tpattern = False
 			count_of_patterns_found = len(event_types_found)
 			
-			print "\n" + "-"*50 + "\nStarting loop"
+			#print "\n" + "-"*50 + "\nStarting loop"
 
 			for event_type_string in self.eventTypes:
 				if self.eventTypes[event_type_string].baseEventType:
@@ -125,7 +140,7 @@ class TPattern(object):
 				else:
 					self.distributionsProcessed.add(event_type)
 
-				print "Processing distribution {0}".format(event_type)
+				#print "Processing distribution {0}".format(event_type)
 
 				N_a, criticalInterval = self.lookForCriticalIntervals(event_type)
 				if criticalInterval:
@@ -134,13 +149,13 @@ class TPattern(object):
 					self.eventTypes[str(e)] = e
 					event_types_found.append(e)
 
-					print "Found tpattern {0}".format(e)
+					#print "Found tpattern {0}".format(e)
 
-			print "Finished looking for distributions. Found: {0}".format(len(event_types_found) - count_of_patterns_found)
+			#print "Finished looking for distributions. Found: {0}".format(len(event_types_found) - count_of_patterns_found)
 
 			newDistributions = []
 			for event_type_to_add in event_types_found[count_of_patterns_found:]:
-				print "Looking for candidate event types to process next time for: {0}".format(event_type_to_add)
+				#print "Looking for candidate event types to process next time for: {0}".format(event_type_to_add)
 				for event_type2_string in self.eventTypes:
 
 					event_type2 = self.eventTypes[str(event_type2_string)]
@@ -175,7 +190,7 @@ class TPattern(object):
 				self.eventDistributions[str(e2)] = newDistribution
 				self.eventTypes[str(e2)] = e2
 			
-			print "Done processing this round of distributions.\n" + "-"*50 + "\n"
+			#print "Done processing this round of distributions.\n" + "-"*50 + "\n"
 
 
 		return event_types_found
@@ -221,7 +236,7 @@ class TPattern(object):
 				#p_value = 1 - binom.cdf(max(0,N_ab-1), len(intervals), prob)
 
 				
-				if p_value < .005:
+				if p_value < .03:
 					#print "\nDistribution for {0}".format(event_type)
 					#print "N_a: {0}, N_ab: {1}, Critical interval: ({2}), P(success): {3:.4f}, p_value: {4:.4f}\n".format(N_a, N_ab, str((d1,d2)), prob, p_value)
 					return N_ab, (d1, d2)

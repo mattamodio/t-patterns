@@ -73,6 +73,9 @@ def main(args):
 	for observationPeriod in testEventsIterator(tpattern):
 		tpattern.processObservationPeriod(observationPeriod)
 
+	for key in tpattern.t_patterns_found:
+		print "{0}: {1}".format(key, tpattern.t_patterns_found[key])
+	sys.exit()
 	event_types_found = tpattern.processDistributions()
 	
 	tpattern.completenessCompetition(event_types_found)
