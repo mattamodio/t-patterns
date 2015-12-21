@@ -73,9 +73,9 @@ def main(args):
 	for observationPeriod in testEventsIterator(tpattern):
 		tpattern.processObservationPeriod(observationPeriod)
 
-	tpattern.processDistributions()
+	event_types_found = tpattern.processDistributions()
 	
-	tpattern.completenessCompetition()
+	tpattern.completenessCompetition(event_types_found)
 
 
 	print "\nFinished at {0}!".format(datetime.datetime.now())

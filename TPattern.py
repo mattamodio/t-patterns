@@ -5,13 +5,16 @@ from scipy.stats import binom, norm
 
 class TPattern(object):
 	def __init__(self):
-		self.eventTypes = set()
+		self.eventTypes = {}
 		self.t_patterns_found = []
 		self.eventTypeCounts = {}
 		self.totalTime = 0
 		self.distributionsProcessed = set()
 		self.eventTypeCounts = {}
 		self.eventDistributions = {}
+
+		import shelve
+		self.eventDistributions = shelve.open('eventDistributions.so', writeback=True)
 
 		# query = "SELECT DISTINCT {0} \
 		# 		 FROM {1} \
@@ -41,7 +44,7 @@ class TPattern(object):
 		for i in xrange(len(observationPeriod)-1, -1, -1):
 			event_instance1 = observationPeriod[i]
 
-			self.eventTypes.add(event_instance1.event_type)
+			self.eventTypes[str(event_instance1.event_type)] = event_instance1.event_type
 
 			# iterate over each later event instance
 			for event_instance2 in observationPeriod[i+1:]:
@@ -51,8 +54,6 @@ class TPattern(object):
 				# check if these form a new event-type pair, or if it's the first time this instance has been used as an eventA
 				# for this event-type pair and it's the first time this instance of eventB has been used for this event-type pair
 				event_type = EventType(first_event_type=event_instance1.event_type, last_event_type=event_instance2.event_type)
-				if event_type in self.distributionsProcessed:
-					continue
 
 				if event_type not in eventPairsSeen or not any( [event_instance1.last_timestamp==eventA or event_instance2.first_timestamp==eventB for eventA,eventB in eventPairsSeen[event_type]] ):
 
@@ -61,10 +62,11 @@ class TPattern(object):
 					timedelta = int(timedelta.total_seconds()/(60*60))
 					interval = Interval(timedelta, event_instance1.id, event_instance2.id, eventTypeCounts[event_instance2.event_type], totalTime)
 
-					if event_type in self.eventDistributions:
-						bisect.insort(self.eventDistributions[event_type], interval)
+					if str(event_type) in self.eventTypes:
+						bisect.insort(self.eventDistributions[str(event_type)], interval)
 					else:
-						self.eventDistributions[event_type] = [interval]
+						self.eventDistributions[str(event_type)] = [interval]
+						self.eventTypes[str(event_type)] = event_type
 
 				
 
@@ -108,10 +110,15 @@ class TPattern(object):
 		found_at_least_one_tpattern = True
 		while found_at_least_one_tpattern:
 			found_at_least_one_tpattern = False
+			count_of_patterns_found = len(event_types_found)
 			
-			#print "\nStarting loop"
+			print "\n" + "-"*50 + "\nStarting loop"
 
-			for event_type in self.eventDistributions:
+			for event_type_string in self.eventTypes:
+				if self.eventTypes[event_type_string].baseEventType:
+					continue
+
+				event_type = self.eventTypes[event_type_string]
 				
 				if event_type in self.distributionsProcessed:
 					continue
@@ -124,17 +131,22 @@ class TPattern(object):
 				if criticalInterval:
 					e = EventType(first_event_type=event_type.first_event_type, last_event_type=event_type.last_event_type, critical_interval=criticalInterval)
 					self.eventTypeCounts[e] = N_a
-					self.eventTypes.add(e)
+					self.eventTypes[str(e)] = e
 					event_types_found.append(e)
 
 					print "Found tpattern {0}".format(e)
 
-			#print "Finished looking for distributions. Found: {0}\n".format(event_types_found)
+			print "Finished looking for distributions. Found: {0}".format(len(event_types_found) - count_of_patterns_found)
 
 			newDistributions = []
-			for event_type_to_add in event_types_found:
-				#print "Looking for candidate event types to process next time for: {0}".format(event_type_to_add)
-				for event_type2 in self.eventDistributions:
+			for event_type_to_add in event_types_found[count_of_patterns_found:]:
+				print "Looking for candidate event types to process next time for: {0}".format(event_type_to_add)
+				for event_type2_string in self.eventTypes:
+
+					event_type2 = self.eventTypes[str(event_type2_string)]
+
+					if event_type2.baseEventType:
+						continue
 
 					if (event_type_to_add,event_type2) in distributionsCheckedForIntervals:
 						continue
@@ -160,21 +172,19 @@ class TPattern(object):
 
 
 			for e2, newDistribution in newDistributions:
-				self.eventDistributions[e2] = newDistribution
+				self.eventDistributions[str(e2)] = newDistribution
+				self.eventTypes[str(e2)] = e2
 			
-			print "Done processing distributions.\n"
+			print "Done processing this round of distributions.\n" + "-"*50 + "\n"
 
-		# for _ in self.eventDistributions:
-		# 	print _, self.eventDistributions[_]
-		# 	print
 
-		return None
+		return event_types_found
 
 	def lookForCriticalIntervals(self, event_type):
 		""" Searches for critical intervals by considering intervals from distributionFirstSeen, and then calculates p-value using
 		both distributions according to t-pattern algorithm."""
 
-		AnextB = self.eventDistributions[event_type]
+		AnextB = self.eventDistributions[str(event_type)]
 		eventA = event_type.first_event_type
 		eventB = event_type.last_event_type
 
@@ -211,7 +221,7 @@ class TPattern(object):
 				#p_value = 1 - binom.cdf(max(0,N_ab-1), len(intervals), prob)
 
 				
-				if p_value < .05:
+				if p_value < .005:
 					#print "\nDistribution for {0}".format(event_type)
 					#print "N_a: {0}, N_ab: {1}, Critical interval: ({2}), P(success): {3:.4f}, p_value: {4:.4f}\n".format(N_a, N_ab, str((d1,d2)), prob, p_value)
 					return N_ab, (d1, d2)
@@ -220,9 +230,9 @@ class TPattern(object):
 
 	def createDistributionForNewEventType(self, event_type, criticalInterval, event_type2, new_type_first_or_last):
 		intervals = []
-		for interval1 in self.eventDistributions[event_type]:
+		for interval1 in self.eventDistributions[str(event_type)]:
 			if interval1.timedelta>=criticalInterval[0] and interval1.timedelta<=criticalInterval[1]:
-				for interval2 in self.eventDistributions[event_type2]:
+				for interval2 in self.eventDistributions[str(event_type2)]:
 
 					# considering candidate event types where the new event type is first
 					if new_type_first_or_last == 'first' and interval1.last_event_id == interval2.first_event_id:
@@ -237,11 +247,10 @@ class TPattern(object):
 
 		return intervals
 
-	def completenessCompetition(self):
+	def completenessCompetition(self, eventTypeList):
 		completePatterns = []
 		print
 
-		eventTypeList = list(self.eventTypes)
 		for i in xrange(len(eventTypeList)):
 			event_type = eventTypeList[i]
 
