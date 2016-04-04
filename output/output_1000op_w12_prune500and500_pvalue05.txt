@@ -1,0 +1,1404 @@
+Starting at 2016-03-02 14:12:19.569516...
+
+	
+Parameters:	
+Table:claim_events_1000op	
+Limit Infrequent Events: 500	
+Limit Infrequent Pairs: 500	
+Prune KL-Divergence: False	
+Window: 12	
+Laplace Pseudocounts: 1	
+P-value Threshold: 0.05	
+
+Found:0 Checked:1 Candidates:361  (AssRouteToOffice AssToFileHandler)
+Found:0 Checked:2 Candidates:360  (AssRouteToOffice ClaimActivityLog)
+Found:0 Checked:3 Candidates:359  (AssRouteToOffice ClaimClosed)
+Found:0 Checked:4 Candidates:358  (AssRouteToOffice ClaimEdited)
+Found:0 Checked:5 Candidates:357  (AssRouteToOffice ClaimReported)
+Found:0 Checked:6 Candidates:356  (AssRouteToOffice ClaimSetup)
+Found:0 Checked:7 Candidates:355  (AssRouteToOffice Inbound)
+Found:0 Checked:8 Candidates:354  (AssRouteToOffice PerilActivity)
+Found:0 Checked:9 Candidates:353  (AssRouteToOffice SuspendedItem)
+Found:0 Checked:10 Candidates:352  (AssToFileHandler AssRouteToOffice)
+Found:0 Checked:11 Candidates:351  (AssToFileHandler AudatexReceipt)
+Found:0 Checked:12 Candidates:350  (AssToFileHandler ClaimActivityLog)
+Found:0 Checked:13 Candidates:349  (AssToFileHandler ClaimClosed)
+Found:0 Checked:14 Candidates:348  (AssToFileHandler ClaimEdited)
+Found:0 Checked:15 Candidates:347  (AssToFileHandler ClaimReported)
+Found:0 Checked:16 Candidates:346  (AssToFileHandler ClaimSetup)
+Found:0 Checked:17 Candidates:345  (AssToFileHandler Correspondencsent)
+Found:0 Checked:18 Candidates:344  (AssToFileHandler DocAddInProgress)
+Found:0 Checked:19 Candidates:343  (AssToFileHandler DocumentAdded)
+Found:0 Checked:20 Candidates:342  (AssToFileHandler FYISent)
+Found:0 Checked:21 Candidates:341  (AssToFileHandler Inbound)
+Found:0 Checked:22 Candidates:340  (AssToFileHandler InitialContact)
+Found:0 Checked:23 Candidates:339  (AssToFileHandler LiabilityAnalysis)
+Found:0 Checked:24 Candidates:338  (AssToFileHandler Outbound)
+Found:0 Checked:25 Candidates:337  (AssToFileHandler PerilActivity)
+Found:0 Checked:26 Candidates:336  (AssToFileHandler ReviewRemFromInbox)
+Found:0 Checked:27 Candidates:335  (AssToFileHandler RouteToInbox)
+Found:0 Checked:28 Candidates:334  (AssToFileHandler SuspendedItem)
+Found:0 Checked:29 Candidates:333  (AssToFileHandler Suspense)
+Found:0 Checked:30 Candidates:332  (AssToFileHandler UnsuspendedItem)
+Found:0 Checked:31 Candidates:331  (AssToFileHandler Vehicle)
+Found:0 Checked:32 Candidates:330  (AssToFileHandler VehicleEdited)
+Found:0 Checked:33 Candidates:329  (AudatexReceipt AssToFileHandler)
+Found:0 Checked:34 Candidates:328  (AudatexReceipt ClaimActivityLog)
+Found:0 Checked:35 Candidates:327  (AudatexReceipt ClaimClosed)
+Found:0 Checked:36 Candidates:326  (AudatexReceipt ClaimEdited)
+Found:0 Checked:37 Candidates:325  (AudatexReceipt ClaimReported)
+Found:0 Checked:38 Candidates:324  (AudatexReceipt ClaimSetup)
+Found:0 Checked:39 Candidates:323  (AudatexReceipt LiabilityAnalysis)
+Found:0 Checked:40 Candidates:322  (AudatexReceipt PerilActivity)
+Found:0 Checked:41 Candidates:321  (AudatexReceipt SuspendedItem)
+Found:0 Checked:42 Candidates:320  (AudatexReceipt Suspense)
+Found:0 Checked:43 Candidates:319  (AudatexReceipt UnsuspendedItem)
+Found:0 Checked:44 Candidates:318  (AudatexReceipt Vehicle)
+Found:0 Checked:45 Candidates:317  (AudatexReceipt VehicleEdited)
+Found:0 Checked:46 Candidates:316  (ClaimActivityLog AssRouteToOffice)
+Found:0 Checked:47 Candidates:315  (ClaimActivityLog AssToFileHandler)
+Found:0 Checked:48 Candidates:314  (ClaimActivityLog AudatexReceipt)
+Found:0 Checked:49 Candidates:313  (ClaimActivityLog ClaimActivityLog)
+Distribution for (ClaimActivityLog 1,2 ClaimActivityLog)
+N_a: 4086, N_ab: 540, Critical interval: ((1, 2)), P(success): 0.1200, p_value: 0.0096
+
+Found:1 Checked:50 Candidates:312  (ClaimActivityLog ClaimClosed)
+Found:1 Checked:51 Candidates:311  (ClaimActivityLog ClaimEdited)
+Found:1 Checked:52 Candidates:310  (ClaimActivityLog ClaimReported)
+Found:1 Checked:53 Candidates:309  (ClaimActivityLog ClaimSetup)
+Found:1 Checked:54 Candidates:308  (ClaimActivityLog Correspondencsent)
+Found:1 Checked:55 Candidates:307  (ClaimActivityLog DocAddInProgress)
+Found:1 Checked:56 Candidates:306  (ClaimActivityLog DocumentAdded)
+Found:1 Checked:57 Candidates:305  (ClaimActivityLog FYISent)
+Found:1 Checked:58 Candidates:304  (ClaimActivityLog Inbound)
+Found:1 Checked:59 Candidates:303  (ClaimActivityLog InitialContact)
+Found:1 Checked:60 Candidates:302  (ClaimActivityLog LiabilityAnalysis)
+Found:1 Checked:61 Candidates:301  (ClaimActivityLog Outbound)
+Found:1 Checked:62 Candidates:300  (ClaimActivityLog PerilActivity)
+Found:1 Checked:63 Candidates:299  (ClaimActivityLog SuspendedItem)
+Found:1 Checked:64 Candidates:298  (ClaimActivityLog Suspense)
+Found:1 Checked:65 Candidates:297  (ClaimActivityLog UnsuspendedItem)
+Found:1 Checked:66 Candidates:296  (ClaimActivityLog Vehicle)
+Found:1 Checked:67 Candidates:295  (ClaimActivityLog VehicleEdited)
+Found:1 Checked:68 Candidates:294  (ClaimClosed AssRouteToOffice)
+Found:1 Checked:69 Candidates:293  (ClaimClosed AssToFileHandler)
+Found:1 Checked:70 Candidates:292  (ClaimClosed AudatexReceipt)
+Found:1 Checked:71 Candidates:291  (ClaimClosed ClaimActivityLog)
+Found:1 Checked:72 Candidates:290  (ClaimClosed ClaimEdited)
+Found:1 Checked:73 Candidates:289  (ClaimClosed ClaimReported)
+Found:1 Checked:74 Candidates:288  (ClaimClosed ClaimSetup)
+Found:1 Checked:75 Candidates:287  (ClaimClosed Correspondencsent)
+Found:1 Checked:76 Candidates:286  (ClaimClosed DocAddInProgress)
+Found:1 Checked:77 Candidates:285  (ClaimClosed DocumentAdded)
+Found:1 Checked:78 Candidates:284  (ClaimClosed FYISent)
+Found:1 Checked:79 Candidates:283  (ClaimClosed Inbound)
+Found:1 Checked:80 Candidates:282  (ClaimClosed InitialContact)
+Found:1 Checked:81 Candidates:281  (ClaimClosed LiabilityAnalysis)
+Found:1 Checked:82 Candidates:280  (ClaimClosed Outbound)
+Found:1 Checked:83 Candidates:279  (ClaimClosed PerilActivity)
+Found:1 Checked:84 Candidates:278  (ClaimClosed ReviewRemFromInbox)
+Found:1 Checked:85 Candidates:277  (ClaimClosed RouteToInbox)
+Found:1 Checked:86 Candidates:276  (ClaimClosed SuspendedItem)
+Found:1 Checked:87 Candidates:275  (ClaimClosed Suspense)
+Found:1 Checked:88 Candidates:274  (ClaimClosed UnsuspendedItem)
+Found:1 Checked:89 Candidates:273  (ClaimClosed Vehicle)
+Found:1 Checked:90 Candidates:272  (ClaimClosed VehicleEdited)
+Found:1 Checked:91 Candidates:271  (ClaimEdited AssRouteToOffice)
+Found:1 Checked:92 Candidates:270  (ClaimEdited AssToFileHandler)
+Found:1 Checked:93 Candidates:269  (ClaimEdited AudatexReceipt)
+Found:1 Checked:94 Candidates:268  (ClaimEdited ClaimActivityLog)
+Found:1 Checked:95 Candidates:267  (ClaimEdited ClaimClosed)
+Found:1 Checked:96 Candidates:266  (ClaimEdited ClaimReported)
+Found:1 Checked:97 Candidates:265  (ClaimEdited ClaimSetup)
+Found:1 Checked:98 Candidates:264  (ClaimEdited Correspondencsent)
+Found:1 Checked:99 Candidates:263  (ClaimEdited DocAddInProgress)
+Found:1 Checked:100 Candidates:262  (ClaimEdited DocumentAdded)
+Found:1 Checked:101 Candidates:261  (ClaimEdited FYISent)
+Found:1 Checked:102 Candidates:260  (ClaimEdited Inbound)
+Found:1 Checked:103 Candidates:259  (ClaimEdited InitialContact)
+Found:1 Checked:104 Candidates:258  (ClaimEdited LiabilityAnalysis)
+Found:1 Checked:105 Candidates:257  (ClaimEdited Outbound)
+Found:1 Checked:106 Candidates:256  (ClaimEdited PerilActivity)
+Found:1 Checked:107 Candidates:255  (ClaimEdited ReviewRemFromInbox)
+Found:1 Checked:108 Candidates:254  (ClaimEdited RouteToInbox)
+Found:1 Checked:109 Candidates:253  (ClaimEdited SuspendedItem)
+Found:1 Checked:110 Candidates:252  (ClaimEdited Suspense)
+Found:1 Checked:111 Candidates:251  (ClaimEdited UnsuspendedItem)
+Found:1 Checked:112 Candidates:250  (ClaimEdited Vehicle)
+Found:1 Checked:113 Candidates:249  (ClaimEdited VehicleEdited)
+Found:1 Checked:114 Candidates:248  (ClaimReported AssRouteToOffice)
+Found:1 Checked:115 Candidates:247  (ClaimReported AssToFileHandler)
+Found:1 Checked:116 Candidates:246  (ClaimReported AudatexReceipt)
+Found:1 Checked:117 Candidates:245  (ClaimReported ClaimActivityLog)
+Found:1 Checked:118 Candidates:244  (ClaimReported ClaimClosed)
+Found:1 Checked:119 Candidates:243  (ClaimReported ClaimEdited)
+Found:1 Checked:120 Candidates:242  (ClaimReported ClaimSetup)
+Found:1 Checked:121 Candidates:241  (ClaimReported Correspondencsent)
+Found:1 Checked:122 Candidates:240  (ClaimReported DocAddInProgress)
+Found:1 Checked:123 Candidates:239  (ClaimReported DocumentAdded)
+Found:1 Checked:124 Candidates:238  (ClaimReported FYISent)
+Found:1 Checked:125 Candidates:237  (ClaimReported Inbound)
+Found:1 Checked:126 Candidates:236  (ClaimReported InitialContact)
+Found:1 Checked:127 Candidates:235  (ClaimReported LiabilityAnalysis)
+Found:1 Checked:128 Candidates:234  (ClaimReported Outbound)
+Found:1 Checked:129 Candidates:233  (ClaimReported PerilActivity)
+Found:1 Checked:130 Candidates:232  (ClaimReported ReviewRemFromInbox)
+Found:1 Checked:131 Candidates:231  (ClaimReported RouteToInbox)
+Found:1 Checked:132 Candidates:230  (ClaimReported SuspendedItem)
+Found:1 Checked:133 Candidates:229  (ClaimReported Suspense)
+Found:1 Checked:134 Candidates:228  (ClaimReported UnsuspendedItem)
+Found:1 Checked:135 Candidates:227  (ClaimReported Vehicle)
+Found:1 Checked:136 Candidates:226  (ClaimReported VehicleEdited)
+Found:1 Checked:137 Candidates:225  (ClaimSetup AssRouteToOffice)
+Found:1 Checked:138 Candidates:224  (ClaimSetup AssToFileHandler)
+Found:1 Checked:139 Candidates:223  (ClaimSetup AudatexReceipt)
+Found:1 Checked:140 Candidates:222  (ClaimSetup ClaimActivityLog)
+Found:1 Checked:141 Candidates:221  (ClaimSetup ClaimClosed)
+Found:1 Checked:142 Candidates:220  (ClaimSetup ClaimEdited)
+Found:1 Checked:143 Candidates:219  (ClaimSetup ClaimReported)
+Found:1 Checked:144 Candidates:218  (ClaimSetup DocAddInProgress)
+Found:1 Checked:145 Candidates:217  (ClaimSetup DocumentAdded)
+Found:1 Checked:146 Candidates:216  (ClaimSetup FYISent)
+Found:1 Checked:147 Candidates:215  (ClaimSetup Inbound)
+Found:1 Checked:148 Candidates:214  (ClaimSetup InitialContact)
+Found:1 Checked:149 Candidates:213  (ClaimSetup Outbound)
+Found:1 Checked:150 Candidates:212  (ClaimSetup PerilActivity)
+Found:1 Checked:151 Candidates:211  (ClaimSetup SuspendedItem)
+Found:1 Checked:152 Candidates:210  (ClaimSetup Suspense)
+Found:1 Checked:153 Candidates:209  (ClaimSetup UnsuspendedItem)
+Found:1 Checked:154 Candidates:208  (ClaimSetup Vehicle)
+Found:1 Checked:155 Candidates:207  (ClaimSetup VehicleEdited)
+Found:1 Checked:156 Candidates:206  (Correspondencsent AssToFileHandler)
+Found:1 Checked:157 Candidates:205  (Correspondencsent ClaimActivityLog)
+Found:1 Checked:158 Candidates:204  (Correspondencsent ClaimClosed)
+Found:1 Checked:159 Candidates:203  (Correspondencsent ClaimEdited)
+Found:1 Checked:160 Candidates:202  (Correspondencsent ClaimReported)
+Found:1 Checked:161 Candidates:201  (Correspondencsent PerilActivity)
+Found:1 Checked:162 Candidates:200  (Correspondencsent SuspendedItem)
+Found:1 Checked:163 Candidates:199  (DocAddInProgress AssToFileHandler)
+Found:1 Checked:164 Candidates:198  (DocAddInProgress ClaimActivityLog)
+Found:1 Checked:165 Candidates:197  (DocAddInProgress ClaimClosed)
+Found:1 Checked:166 Candidates:196  (DocAddInProgress ClaimEdited)
+Found:1 Checked:167 Candidates:195  (DocAddInProgress ClaimReported)
+Found:1 Checked:168 Candidates:194  (DocAddInProgress ClaimSetup)
+Found:1 Checked:169 Candidates:193  (DocAddInProgress DocumentAdded)
+Found:1 Checked:170 Candidates:192  (DocAddInProgress FYISent)
+Found:1 Checked:171 Candidates:191  (DocAddInProgress Inbound)
+Found:1 Checked:172 Candidates:190  (DocAddInProgress PerilActivity)
+Found:1 Checked:173 Candidates:189  (DocAddInProgress SuspendedItem)
+Found:1 Checked:174 Candidates:188  (DocAddInProgress UnsuspendedItem)
+Found:1 Checked:175 Candidates:187  (DocumentAdded AssToFileHandler)
+Found:1 Checked:176 Candidates:186  (DocumentAdded ClaimActivityLog)
+Found:1 Checked:177 Candidates:185  (DocumentAdded ClaimClosed)
+Found:1 Checked:178 Candidates:184  (DocumentAdded ClaimEdited)
+Found:1 Checked:179 Candidates:183  (DocumentAdded ClaimReported)
+Found:1 Checked:180 Candidates:182  (DocumentAdded ClaimSetup)
+Found:1 Checked:181 Candidates:181  (DocumentAdded DocAddInProgress)
+Found:1 Checked:182 Candidates:180  (DocumentAdded FYISent)
+Found:1 Checked:183 Candidates:179  (DocumentAdded Inbound)
+Found:1 Checked:184 Candidates:178  (DocumentAdded PerilActivity)
+Found:1 Checked:185 Candidates:177  (DocumentAdded SuspendedItem)
+Found:1 Checked:186 Candidates:176  (DocumentAdded UnsuspendedItem)
+Found:1 Checked:187 Candidates:175  (FYISent AssToFileHandler)
+Found:1 Checked:188 Candidates:174  (FYISent ClaimActivityLog)
+Found:1 Checked:189 Candidates:173  (FYISent ClaimClosed)
+Found:1 Checked:190 Candidates:172  (FYISent ClaimEdited)
+Found:1 Checked:191 Candidates:171  (FYISent ClaimReported)
+Found:1 Checked:192 Candidates:170  (FYISent ClaimSetup)
+Found:1 Checked:193 Candidates:169  (FYISent DocAddInProgress)
+Found:1 Checked:194 Candidates:168  (FYISent DocumentAdded)
+Found:1 Checked:195 Candidates:167  (FYISent Inbound)
+Found:1 Checked:196 Candidates:166  (FYISent PerilActivity)
+Found:1 Checked:197 Candidates:165  (FYISent SuspendedItem)
+Found:1 Checked:198 Candidates:164  (FYISent UnsuspendedItem)
+Found:1 Checked:199 Candidates:163  (Inbound AssRouteToOffice)
+Found:1 Checked:200 Candidates:162  (Inbound AssToFileHandler)
+Found:1 Checked:201 Candidates:161  (Inbound ClaimActivityLog)
+Found:1 Checked:202 Candidates:160  (Inbound ClaimClosed)
+Found:1 Checked:203 Candidates:159  (Inbound ClaimEdited)
+Found:1 Checked:204 Candidates:158  (Inbound ClaimReported)
+Found:1 Checked:205 Candidates:157  (Inbound ClaimSetup)
+Found:1 Checked:206 Candidates:156  (Inbound DocAddInProgress)
+Found:1 Checked:207 Candidates:155  (Inbound DocumentAdded)
+Found:1 Checked:208 Candidates:154  (Inbound FYISent)
+Found:1 Checked:209 Candidates:153  (Inbound Inbound)
+Found:1 Checked:210 Candidates:152  (Inbound InitialContact)
+Found:1 Checked:211 Candidates:151  (Inbound PerilActivity)
+Found:1 Checked:212 Candidates:150  (Inbound SuspendedItem)
+Found:1 Checked:213 Candidates:149  (Inbound UnsuspendedItem)
+Found:1 Checked:214 Candidates:148  (InitialContact AssToFileHandler)
+Found:1 Checked:215 Candidates:147  (InitialContact ClaimActivityLog)
+Found:1 Checked:216 Candidates:146  (InitialContact ClaimClosed)
+Found:1 Checked:217 Candidates:145  (InitialContact ClaimEdited)
+Found:1 Checked:218 Candidates:144  (InitialContact ClaimReported)
+Found:1 Checked:219 Candidates:143  (InitialContact ClaimSetup)
+Found:1 Checked:220 Candidates:142  (InitialContact Inbound)
+Found:1 Checked:221 Candidates:141  (InitialContact PerilActivity)
+Found:1 Checked:222 Candidates:140  (InitialContact SuspendedItem)
+Found:1 Checked:223 Candidates:139  (InitialContact Suspense)
+Found:1 Checked:224 Candidates:138  (InitialContact UnsuspendedItem)
+Found:1 Checked:225 Candidates:137  (InitialContact Vehicle)
+Found:1 Checked:226 Candidates:136  (InitialContact VehicleEdited)
+Found:1 Checked:227 Candidates:135  (LiabilityAnalysis AssToFileHandler)
+Found:1 Checked:228 Candidates:134  (LiabilityAnalysis AudatexReceipt)
+Found:1 Checked:229 Candidates:133  (LiabilityAnalysis ClaimActivityLog)
+Found:1 Checked:230 Candidates:132  (LiabilityAnalysis ClaimClosed)
+Found:1 Checked:231 Candidates:131  (LiabilityAnalysis ClaimEdited)
+Found:1 Checked:232 Candidates:130  (LiabilityAnalysis ClaimReported)
+Found:1 Checked:233 Candidates:129  (LiabilityAnalysis PerilActivity)
+Found:1 Checked:234 Candidates:128  (LiabilityAnalysis SuspendedItem)
+Found:1 Checked:235 Candidates:127  (LiabilityAnalysis Vehicle)
+Found:1 Checked:236 Candidates:126  (LiabilityAnalysis VehicleEdited)
+Found:1 Checked:237 Candidates:125  (Outbound AssToFileHandler)
+Found:1 Checked:238 Candidates:124  (Outbound ClaimActivityLog)
+Found:1 Checked:239 Candidates:123  (Outbound ClaimClosed)
+Found:1 Checked:240 Candidates:122  (Outbound ClaimEdited)
+Found:1 Checked:241 Candidates:121  (Outbound ClaimReported)
+Found:1 Checked:242 Candidates:120  (Outbound ClaimSetup)
+Found:1 Checked:243 Candidates:119  (Outbound PerilActivity)
+Found:1 Checked:244 Candidates:118  (Outbound SuspendedItem)
+Found:1 Checked:245 Candidates:117  (PerilActivity AssRouteToOffice)
+Found:1 Checked:246 Candidates:116  (PerilActivity AssToFileHandler)
+Found:1 Checked:247 Candidates:115  (PerilActivity AudatexReceipt)
+Found:1 Checked:248 Candidates:114  (PerilActivity ClaimActivityLog)
+Found:1 Checked:249 Candidates:113  (PerilActivity ClaimClosed)
+Found:1 Checked:250 Candidates:112  (PerilActivity ClaimEdited)
+Found:1 Checked:251 Candidates:111  (PerilActivity ClaimReported)
+Found:1 Checked:252 Candidates:110  (PerilActivity ClaimSetup)
+Found:1 Checked:253 Candidates:109  (PerilActivity Correspondencsent)
+Found:1 Checked:254 Candidates:108  (PerilActivity DocAddInProgress)
+Found:1 Checked:255 Candidates:107  (PerilActivity DocumentAdded)
+Found:1 Checked:256 Candidates:106  (PerilActivity FYISent)
+Found:1 Checked:257 Candidates:105  (PerilActivity Inbound)
+Found:1 Checked:258 Candidates:104  (PerilActivity InitialContact)
+Found:1 Checked:259 Candidates:103  (PerilActivity LiabilityAnalysis)
+Found:1 Checked:260 Candidates:102  (PerilActivity Outbound)
+Found:1 Checked:261 Candidates:101  (PerilActivity PerilActivity)
+Found:1 Checked:262 Candidates:100  (PerilActivity ReviewRemFromInbox)
+Found:1 Checked:263 Candidates:99  (PerilActivity RouteToInbox)
+Found:1 Checked:264 Candidates:98  (PerilActivity SuspendedItem)
+Found:1 Checked:265 Candidates:97  (PerilActivity Suspense)
+Found:1 Checked:266 Candidates:96  (PerilActivity UnsuspendedItem)
+Found:1 Checked:267 Candidates:95  (PerilActivity Vehicle)
+Found:1 Checked:268 Candidates:94  (PerilActivity VehicleEdited)
+Found:1 Checked:269 Candidates:93  (ReviewRemFromInbox AssToFileHandler)
+Found:1 Checked:270 Candidates:92  (ReviewRemFromInbox ClaimClosed)
+Found:1 Checked:271 Candidates:91  (ReviewRemFromInbox ClaimEdited)
+Found:1 Checked:272 Candidates:90  (ReviewRemFromInbox ClaimReported)
+Found:1 Checked:273 Candidates:89  (ReviewRemFromInbox PerilActivity)
+Found:1 Checked:274 Candidates:88  (ReviewRemFromInbox RouteToInbox)
+Found:1 Checked:275 Candidates:87  (RouteToInbox AssToFileHandler)
+Found:1 Checked:276 Candidates:86  (RouteToInbox ClaimClosed)
+Found:1 Checked:277 Candidates:85  (RouteToInbox ClaimEdited)
+Found:1 Checked:278 Candidates:84  (RouteToInbox ClaimReported)
+Found:1 Checked:279 Candidates:83  (RouteToInbox PerilActivity)
+Found:1 Checked:280 Candidates:82  (RouteToInbox ReviewRemFromInbox)
+Found:1 Checked:281 Candidates:81  (SuspendedItem AssRouteToOffice)
+Found:1 Checked:282 Candidates:80  (SuspendedItem AssToFileHandler)
+Found:1 Checked:283 Candidates:79  (SuspendedItem AudatexReceipt)
+Found:1 Checked:284 Candidates:78  (SuspendedItem ClaimActivityLog)
+Found:1 Checked:285 Candidates:77  (SuspendedItem ClaimClosed)
+Found:1 Checked:286 Candidates:76  (SuspendedItem ClaimEdited)
+Found:1 Checked:287 Candidates:75  (SuspendedItem ClaimReported)
+Found:1 Checked:288 Candidates:74  (SuspendedItem ClaimSetup)
+Found:1 Checked:289 Candidates:73  (SuspendedItem Correspondencsent)
+Found:1 Checked:290 Candidates:72  (SuspendedItem DocAddInProgress)
+Found:1 Checked:291 Candidates:71  (SuspendedItem DocumentAdded)
+Found:1 Checked:292 Candidates:70  (SuspendedItem FYISent)
+Found:1 Checked:293 Candidates:69  (SuspendedItem Inbound)
+Found:1 Checked:294 Candidates:68  (SuspendedItem InitialContact)
+Found:1 Checked:295 Candidates:67  (SuspendedItem LiabilityAnalysis)
+Found:1 Checked:296 Candidates:66  (SuspendedItem Outbound)
+Found:1 Checked:297 Candidates:65  (SuspendedItem PerilActivity)
+Found:1 Checked:298 Candidates:64  (SuspendedItem SuspendedItem)
+Found:1 Checked:299 Candidates:63  (SuspendedItem Suspense)
+Found:1 Checked:300 Candidates:62  (SuspendedItem UnsuspendedItem)
+Found:1 Checked:301 Candidates:61  (SuspendedItem Vehicle)
+Found:1 Checked:302 Candidates:60  (SuspendedItem VehicleEdited)
+Found:1 Checked:303 Candidates:59  (Suspense AssToFileHandler)
+Found:1 Checked:304 Candidates:58  (Suspense AudatexReceipt)
+Found:1 Checked:305 Candidates:57  (Suspense ClaimActivityLog)
+Found:1 Checked:306 Candidates:56  (Suspense ClaimClosed)
+Found:1 Checked:307 Candidates:55  (Suspense ClaimEdited)
+Found:1 Checked:308 Candidates:54  (Suspense ClaimReported)
+Found:1 Checked:309 Candidates:53  (Suspense ClaimSetup)
+Found:1 Checked:310 Candidates:52  (Suspense InitialContact)
+Found:1 Checked:311 Candidates:51  (Suspense PerilActivity)
+Found:1 Checked:312 Candidates:50  (Suspense SuspendedItem)
+Found:1 Checked:313 Candidates:49  (Suspense UnsuspendedItem)
+Found:1 Checked:314 Candidates:48  (Suspense Vehicle)
+Found:1 Checked:315 Candidates:47  (Suspense VehicleEdited)
+Found:1 Checked:316 Candidates:46  (UnsuspendedItem AssToFileHandler)
+Found:1 Checked:317 Candidates:45  (UnsuspendedItem AudatexReceipt)
+Found:1 Checked:318 Candidates:44  (UnsuspendedItem ClaimActivityLog)
+Found:1 Checked:319 Candidates:43  (UnsuspendedItem ClaimClosed)
+Found:1 Checked:320 Candidates:42  (UnsuspendedItem ClaimEdited)
+Found:1 Checked:321 Candidates:41  (UnsuspendedItem ClaimReported)
+Found:1 Checked:322 Candidates:40  (UnsuspendedItem ClaimSetup)
+Found:1 Checked:323 Candidates:39  (UnsuspendedItem DocAddInProgress)
+Found:1 Checked:324 Candidates:38  (UnsuspendedItem DocumentAdded)
+Found:1 Checked:325 Candidates:37  (UnsuspendedItem FYISent)
+Found:1 Checked:326 Candidates:36  (UnsuspendedItem Inbound)
+Found:1 Checked:327 Candidates:35  (UnsuspendedItem InitialContact)
+Found:1 Checked:328 Candidates:34  (UnsuspendedItem PerilActivity)
+Found:1 Checked:329 Candidates:33  (UnsuspendedItem SuspendedItem)
+Distribution for (UnsuspendedItem 4,11 SuspendedItem)
+N_a: 2035, N_ab: 950, Critical interval: ((4, 11)), P(success): 0.4426, p_value: 0.0148
+
+Found:2 Checked:330 Candidates:32  (UnsuspendedItem Suspense)
+Found:2 Checked:331 Candidates:31  (UnsuspendedItem UnsuspendedItem)
+Found:2 Checked:332 Candidates:30  (UnsuspendedItem Vehicle)
+Found:2 Checked:333 Candidates:29  (UnsuspendedItem VehicleEdited)
+Found:2 Checked:334 Candidates:28  (Vehicle AssToFileHandler)
+Found:2 Checked:335 Candidates:27  (Vehicle AudatexReceipt)
+Found:2 Checked:336 Candidates:26  (Vehicle ClaimActivityLog)
+Found:2 Checked:337 Candidates:25  (Vehicle ClaimClosed)
+Found:2 Checked:338 Candidates:24  (Vehicle ClaimEdited)
+Found:2 Checked:339 Candidates:23  (Vehicle ClaimReported)
+Found:2 Checked:340 Candidates:22  (Vehicle ClaimSetup)
+Found:2 Checked:341 Candidates:21  (Vehicle InitialContact)
+Found:2 Checked:342 Candidates:20  (Vehicle LiabilityAnalysis)
+Found:2 Checked:343 Candidates:19  (Vehicle PerilActivity)
+Found:2 Checked:344 Candidates:18  (Vehicle SuspendedItem)
+Found:2 Checked:345 Candidates:17  (Vehicle Suspense)
+Found:2 Checked:346 Candidates:16  (Vehicle UnsuspendedItem)
+Found:2 Checked:347 Candidates:15  (Vehicle Vehicle)
+Distribution for (Vehicle 1,2 Vehicle)
+N_a: 5204, N_ab: 668, Critical interval: ((1, 2)), P(success): 0.1206, p_value: 0.0463
+
+Found:3 Checked:348 Candidates:14  (Vehicle VehicleEdited)
+Found:3 Checked:349 Candidates:13  (VehicleEdited AssToFileHandler)
+Found:3 Checked:350 Candidates:12  (VehicleEdited AudatexReceipt)
+Found:3 Checked:351 Candidates:11  (VehicleEdited ClaimActivityLog)
+Found:3 Checked:352 Candidates:10  (VehicleEdited ClaimClosed)
+Found:3 Checked:353 Candidates:9  (VehicleEdited ClaimEdited)
+Found:3 Checked:354 Candidates:8  (VehicleEdited ClaimReported)
+Found:3 Checked:355 Candidates:7  (VehicleEdited ClaimSetup)
+Found:3 Checked:356 Candidates:6  (VehicleEdited InitialContact)
+Found:3 Checked:357 Candidates:5  (VehicleEdited LiabilityAnalysis)
+Found:3 Checked:358 Candidates:4  (VehicleEdited PerilActivity)
+Found:3 Checked:359 Candidates:3  (VehicleEdited SuspendedItem)
+Found:3 Checked:360 Candidates:2  (VehicleEdited Suspense)
+Found:3 Checked:361 Candidates:1  (VehicleEdited UnsuspendedItem)
+Found:3 Checked:362 Candidates:0  (VehicleEdited Vehicle)
+
+Checked 362 patterns.
+
+Considering completeness of (ClaimActivityLog 1,2 ClaimActivityLog): Complete
+Considering completeness of (UnsuspendedItem 4,11 SuspendedItem): Complete
+Considering completeness of (Vehicle 1,2 Vehicle): Complete
+
+Complete patterns:
+Pattern 0: (ClaimActivityLog 1,2 ClaimActivityLog)
+Observation Periods with this pattern: [1, 2, 3, 5, 6, 7, 8, 10, 11, 12, 13, 16, 21, 22, 23, 24, 25, 26, 27, 30, 31, 32, 36, 37, 41, 43, 44, 47, 48, 49, 51, 52, 55, 70, 71, 73, 74, 76, 77, 82, 83, 84, 85, 89, 90, 91, 93, 95, 96, 97, 99, 100, 101, 102, 105, 107, 108, 113, 119, 120, 125, 126, 127, 130, 131, 133, 135, 136, 137, 139, 141, 142, 143, 144, 146, 147, 151, 158, 159, 160, 164, 166, 168, 173, 174, 180, 181, 183, 184, 185, 187, 188, 191, 192, 194, 196, 198, 202, 204, 205, 208, 212, 213, 214, 216, 217, 220, 223, 224, 228, 231, 232, 248, 252, 253, 254, 256, 257, 258, 259, 264, 265, 267, 268, 270, 272, 274, 277, 279, 280, 281, 291, 293, 294, 296, 298, 299, 302, 303, 304, 306, 308, 311, 315, 317, 318, 319, 322, 323, 324, 331, 335, 337, 338, 342, 345, 347, 350, 351, 356, 358, 359, 360, 361, 367, 368, 370, 371, 372, 373, 375, 377, 380, 382, 387, 388, 390, 391, 392, 397, 398, 400, 402, 403, 404, 407, 409, 410, 411, 430, 433, 437, 438, 439, 440, 441, 444, 455, 456, 459, 463, 465, 468, 470, 473, 475, 476, 482, 484, 488, 489, 491, 492, 495, 497, 501, 504, 507, 508, 511, 516, 517, 519, 520, 525, 533, 536, 537, 539, 540, 541, 543, 548, 549, 551, 552, 555, 556, 558, 559, 564, 565, 567, 570, 571, 573, 575, 576, 580, 581, 582, 583, 599, 600, 601, 602, 603, 606, 608, 609, 610, 612, 613, 614, 616, 623, 627, 628, 630, 631, 632, 634, 640, 641, 642, 643, 650, 651, 652, 657, 661, 664, 665, 666, 668, 671, 672, 676, 677, 679, 680, 682, 684, 689, 691, 696, 697, 698, 699, 700, 701, 703, 706, 707, 708, 711, 712, 714, 715, 716, 719, 720, 722, 723, 724, 727, 728, 730, 741, 744, 745, 746, 749, 750, 751, 752, 754, 756, 757, 759, 761, 762, 763, 766, 767, 772, 773, 774, 775, 776, 777, 779, 780, 782, 784, 786, 787, 789, 794, 795, 796, 798, 800, 803, 805, 806, 807, 808, 809, 810, 811, 813, 814, 816, 820, 822, 824, 827, 831, 837, 838, 839, 840, 842, 843, 844, 845, 851, 852, 854, 856, 857, 858, 859, 860, 861, 862, 864, 865, 866, 872, 873, 874, 875, 879, 881, 882, 905, 907, 909, 918, 923, 925, 928, 931, 932, 935, 936, 939, 942, 943, 945, 947, 949, 950, 951, 952, 953, 954, 957, 958, 962, 963, 964, 965, 969, 971, 973, 974, 975, 977, 979, 983, 989, 995, 997, 998, 999, 1000]
+
+Pattern 1: (UnsuspendedItem 4,11 SuspendedItem)
+Observation Periods with this pattern: [4, 5, 6, 9, 10, 11, 13, 14, 16, 19, 20, 23, 25, 27, 28, 29, 30, 32, 34, 35, 36, 37, 39, 40, 41, 42, 44, 45, 46, 48, 52, 62, 71, 72, 73, 74, 76, 78, 80, 81, 82, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 98, 99, 100, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 119, 120, 123, 125, 126, 127, 128, 133, 137, 142, 143, 146, 147, 154, 157, 160, 172, 180, 181, 184, 186, 189, 190, 191, 192, 193, 195, 196, 197, 199, 203, 204, 205, 208, 210, 211, 212, 213, 218, 222, 223, 224, 225, 226, 227, 228, 231, 232, 235, 248, 250, 252, 254, 255, 256, 257, 258, 261, 262, 263, 264, 265, 266, 267, 268, 269, 272, 275, 277, 278, 280, 282, 283, 284, 285, 286, 287, 288, 290, 292, 293, 294, 295, 299, 300, 301, 302, 303, 307, 313, 318, 319, 324, 331, 345, 351, 352, 354, 355, 356, 358, 359, 361, 362, 364, 366, 367, 369, 371, 376, 377, 378, 379, 381, 383, 388, 389, 391, 394, 395, 399, 400, 401, 407, 408, 410, 421, 433, 436, 437, 438, 440, 442, 443, 444, 445, 446, 448, 449, 451, 452, 453, 454, 455, 456, 458, 459, 461, 463, 464, 466, 467, 468, 469, 470, 472, 473, 475, 477, 478, 479, 485, 487, 488, 489, 490, 495, 496, 501, 503, 504, 508, 519, 520, 521, 522, 528, 529, 530, 536, 537, 539, 541, 542, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 556, 557, 558, 559, 562, 563, 564, 565, 569, 571, 575, 576, 578, 580, 582, 583, 590, 600, 601, 603, 604, 610, 611, 614, 615, 617, 619, 620, 621, 622, 623, 625, 626, 627, 628, 629, 630, 631, 632, 635, 636, 637, 638, 639, 640, 642, 643, 651, 654, 659, 666, 674, 676, 677, 680, 684, 685, 687, 689, 697, 700, 701, 702, 704, 705, 707, 708, 709, 710, 712, 715, 720, 722, 726, 727, 729, 737, 742, 743, 745, 746, 749, 751, 752, 753, 754, 755, 756, 757, 761, 762, 764, 765, 766, 767, 769, 770, 771, 773, 774, 776, 777, 778, 779, 780, 781, 783, 784, 786, 789, 790, 800, 803, 805, 807, 813, 825, 831, 838, 839, 841, 842, 843, 844, 848, 849, 850, 851, 856, 857, 860, 862, 863, 864, 865, 868, 871, 872, 875, 879, 880, 881, 905, 907, 909, 910, 911, 915, 917, 918, 919, 921, 923, 925, 926, 929, 930, 932, 933, 934, 935, 936, 937, 940, 943, 946, 947, 949, 950, 951, 952, 954, 955, 956, 959, 960, 962, 964, 967, 971, 973, 977, 979, 983, 990, 991, 992, 998, 999, 1000]
+
+Pattern 2: (Vehicle 1,2 Vehicle)
+Observation Periods with this pattern: [2, 5, 6, 7, 8, 10, 11, 12, 13, 14, 16, 18, 19, 25, 26, 28, 29, 30, 32, 34, 35, 36, 37, 38, 39, 44, 45, 46, 47, 50, 52, 69, 71, 73, 77, 78, 79, 80, 81, 82, 83, 84, 86, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101, 102, 103, 104, 105, 106, 107, 109, 110, 113, 114, 115, 116, 117, 118, 119, 120, 122, 124, 125, 126, 172, 173, 174, 177, 178, 182, 183, 184, 185, 186, 187, 189, 190, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 205, 206, 207, 208, 210, 211, 213, 214, 215, 220, 221, 222, 223, 225, 226, 227, 228, 229, 231, 248, 249, 250, 251, 252, 253, 254, 256, 258, 260, 261, 262, 264, 265, 267, 268, 270, 271, 272, 273, 274, 276, 277, 278, 280, 282, 283, 284, 288, 290, 292, 293, 295, 296, 297, 298, 299, 300, 301, 303, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 374, 376, 377, 378, 379, 380, 381, 382, 383, 385, 387, 388, 390, 391, 392, 394, 395, 397, 399, 403, 405, 407, 408, 409, 411, 412, 413, 433, 435, 436, 437, 438, 439, 440, 441, 442, 444, 445, 446, 447, 448, 449, 450, 451, 452, 454, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 468, 469, 473, 474, 475, 521, 523, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 537, 539, 540, 541, 542, 543, 545, 548, 549, 551, 552, 553, 554, 556, 557, 558, 559, 560, 561, 562, 564, 565, 567, 569, 570, 571, 572, 573, 575, 576, 577, 579, 580, 581, 583, 597, 598, 599, 601, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 614, 615, 617, 618, 619, 620, 621, 623, 624, 625, 626, 628, 629, 630, 632, 633, 634, 635, 636, 638, 639, 640, 641, 673, 674, 675, 676, 677, 678, 680, 683, 684, 685, 687, 688, 689, 693, 696, 697, 700, 702, 703, 706, 707, 709, 711, 712, 713, 714, 722, 723, 725, 726, 728, 730, 742, 743, 744, 745, 746, 747, 748, 749, 751, 752, 753, 754, 755, 756, 757, 761, 762, 763, 764, 765, 767, 768, 769, 770, 773, 774, 775, 776, 777, 778, 779, 781, 782, 783, 785, 786, 787, 788, 839, 841, 842, 843, 844, 847, 848, 849, 850, 851, 852, 853, 854, 856, 857, 858, 860, 862, 863, 864, 865, 867, 869, 870, 871, 873, 874, 875, 877, 878, 879, 880, 881, 882, 883, 884, 905, 906, 907, 911, 912, 913, 914, 915, 919, 920, 921, 922, 923, 924, 925, 926, 927, 928, 929, 930, 932, 933, 934, 936, 937, 938, 939, 940, 941, 942, 946, 947, 948, 949, 950, 951, 952, 954, 955, 957, 958, 960, 961, 962, 963, 964]
+
+Output dataset written to outputdata.csv:
+[1, 0, 0]
+[1, 0, 1]
+[1, 0, 0]
+[0, 1, 0]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 0, 1]
+[0, 1, 0]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[0, 0, 0]
+[1, 1, 1]
+[0, 0, 0]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 0]
+[1, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[1, 0, 0]
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 0]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 0, 0]
+[1, 1, 1]
+[0, 0, 0]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 0]
+[1, 1, 0]
+[0, 1, 0]
+[1, 0, 0]
+[1, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 0, 1]
+[1, 1, 0]
+[1, 0, 0]
+[0, 0, 1]
+[1, 0, 0]
+[1, 1, 1]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 1]
+[1, 0, 0]
+[1, 1, 1]
+[0, 1, 0]
+[1, 1, 1]
+[1, 1, 0]
+[0, 0, 0]
+[1, 1, 0]
+[1, 0, 1]
+[0, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 0]
+[0, 1, 1]
+[0, 1, 0]
+[0, 0, 0]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[0, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 0]
+[1, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 0]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 0]
+[0, 1, 0]
+[1, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[0, 0, 0]
+[0, 0, 1]
+[0, 1, 0]
+[0, 0, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 1, 0]
+[0, 1, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[1, 1, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[1, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 1, 1]
+[1, 0, 1]
+[1, 0, 1]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 1]
+[0, 0, 1]
+[0, 0, 0]
+[1, 1, 0]
+[1, 1, 0]
+[0, 0, 1]
+[1, 0, 1]
+[1, 1, 1]
+[1, 0, 1]
+[0, 1, 1]
+[1, 0, 1]
+[1, 0, 0]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 0]
+[1, 1, 1]
+[0, 1, 1]
+[1, 0, 1]
+[0, 1, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 0, 1]
+[0, 1, 1]
+[0, 0, 1]
+[0, 0, 1]
+[1, 0, 1]
+[0, 1, 0]
+[1, 1, 0]
+[1, 1, 1]
+[0, 0, 1]
+[0, 0, 1]
+[1, 1, 1]
+[0, 0, 0]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 0]
+[1, 1, 1]
+[1, 0, 1]
+[0, 0, 1]
+[1, 0, 0]
+[1, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[1, 0, 1]
+[0, 0, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 0]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[0, 0, 1]
+[0, 0, 0]
+[1, 1, 1]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+[0, 1, 0]
+[1, 1, 1]
+[1, 1, 0]
+[1, 1, 1]
+[1, 0, 0]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 0]
+[1, 1, 1]
+[1, 1, 1]
+[0, 1, 0]
+[1, 1, 1]
+[1, 1, 1]
+[0, 1, 0]
+[1, 0, 1]
+[0, 0, 1]
+[1, 1, 1]
+[0, 0, 1]
+[1, 0, 1]
+[0, 1, 0]
+[0, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 0, 0]
+[1, 1, 1]
+[1, 0, 0]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 0]
+[0, 1, 0]
+[0, 1, 0]
+[0, 1, 1]
+[0, 0, 0]
+[0, 1, 1]
+[1, 0, 0]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 0]
+[0, 1, 1]
+[1, 0, 1]
+[0, 0, 1]
+[1, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 0]
+[1, 1, 1]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 1, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 1, 1]
+[0, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 0]
+[0, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[0, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 0, 0]
+[0, 0, 1]
+[1, 0, 0]
+[0, 1, 1]
+[1, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 0, 1]
+[0, 1, 1]
+[1, 0, 1]
+[0, 1, 1]
+[0, 0, 0]
+[0, 0, 1]
+[0, 0, 0]
+[1, 0, 1]
+[1, 1, 1]
+[0, 1, 0]
+[1, 0, 1]
+[1, 1, 1]
+[1, 0, 1]
+[0, 0, 0]
+[0, 1, 1]
+[0, 1, 1]
+[0, 0, 0]
+[1, 0, 1]
+[1, 0, 0]
+[0, 1, 1]
+[1, 1, 0]
+[0, 1, 0]
+[1, 0, 0]
+[1, 0, 1]
+[1, 0, 0]
+[0, 0, 1]
+[0, 0, 0]
+[1, 1, 1]
+[0, 1, 1]
+[1, 0, 1]
+[1, 1, 0]
+[1, 0, 1]
+[0, 0, 1]
+[0, 0, 1]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 1, 1]
+[0, 0, 0]
+[0, 0, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+[1, 0, 1]
+[0, 1, 1]
+[0, 1, 0]
+[1, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 0]
+[0, 1, 1]
+[1, 1, 0]
+[1, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[1, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 0, 1]
+[0, 1, 1]
+[0, 1, 0]
+[1, 1, 1]
+[0, 1, 1]
+[1, 1, 0]
+[0, 0, 0]
+[0, 1, 0]
+[1, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[1, 0, 0]
+[0, 1, 0]
+[0, 1, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 1, 0]
+[1, 1, 0]
+[1, 1, 0]
+[0, 1, 0]
+[1, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 1, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 1, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[1, 1, 0]
+[0, 1, 1]
+[0, 1, 0]
+[0, 0, 1]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 0, 1]
+[0, 0, 1]
+[1, 0, 1]
+[0, 0, 1]
+[0, 0, 1]
+[1, 1, 0]
+[1, 1, 1]
+[0, 0, 0]
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 0, 1]
+[0, 1, 0]
+[0, 1, 1]
+[0, 1, 0]
+[0, 1, 0]
+[1, 1, 1]
+[1, 1, 1]
+[0, 1, 0]
+[1, 1, 1]
+[1, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 0, 0]
+[1, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[0, 0, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 0]
+[1, 1, 1]
+[1, 1, 1]
+[0, 0, 0]
+[1, 0, 1]
+[0, 0, 0]
+[0, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+[0, 0, 1]
+[1, 0, 1]
+[0, 0, 0]
+[1, 1, 1]
+[1, 1, 1]
+[0, 0, 1]
+[0, 1, 0]
+[0, 0, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 0]
+[1, 1, 1]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 1]
+[0, 0, 1]
+[1, 0, 1]
+[1, 1, 0]
+[1, 1, 1]
+[1, 0, 0]
+[1, 1, 1]
+[0, 1, 1]
+[0, 0, 1]
+[1, 0, 1]
+[0, 0, 1]
+[1, 0, 1]
+[1, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 0, 1]
+[1, 0, 0]
+[1, 1, 1]
+[0, 1, 1]
+[1, 0, 0]
+[0, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 0]
+[1, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 0]
+[1, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 0]
+[1, 1, 1]
+[0, 0, 1]
+[1, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 0]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[0, 0, 1]
+[0, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[1, 1, 1]
+[0, 0, 1]
+[1, 0, 0]
+[1, 1, 1]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[0, 0, 0]
+[0, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 1]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 1]
+[1, 1, 1]
+[1, 0, 0]
+[1, 0, 0]
+[1, 1, 1]
+[1, 1, 0]
+[0, 1, 1]
+[1, 0, 1]
+[0, 1, 0]
+[0, 1, 0]
+[1, 0, 1]
+[1, 1, 1]
+[1, 1, 0]
+[0, 1, 1]
+[0, 1, 0]
+[1, 0, 1]
+[1, 1, 1]
+[0, 0, 1]
+[1, 0, 1]
+[1, 1, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[1, 1, 1]
+[1, 0, 1]
+[1, 0, 0]
+[0, 0, 1]
+[0, 1, 1]
+[1, 1, 0]
+[1, 0, 1]
+[0, 1, 0]
+[1, 0, 1]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 1, 1]
+[0, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+[1, 1, 1]
+[0, 0, 1]
+[0, 0, 1]
+[1, 1, 1]
+[1, 0, 0]
+[1, 1, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 0]
+[1, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 0]
+[1, 0, 0]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 0]
+[0, 1, 1]
+[1, 0, 1]
+[0, 1, 1]
+[1, 1, 0]
+[0, 0, 1]
+[1, 1, 1]
+[1, 0, 1]
+[0, 0, 1]
+[1, 1, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[1, 1, 0]
+[1, 0, 0]
+[1, 1, 0]
+[1, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[1, 1, 1]
+[1, 0, 0]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 0]
+[0, 0, 0]
+[0, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[0, 0, 1]
+[1, 0, 1]
+[0, 0, 0]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 0, 0]
+[1, 1, 1]
+[1, 0, 0]
+[1, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 0]
+[0, 0, 1]
+[0, 1, 0]
+[0, 0, 1]
+[0, 0, 1]
+[0, 1, 1]
+[1, 1, 0]
+[1, 0, 1]
+[1, 0, 1]
+[1, 1, 1]
+[0, 0, 0]
+[0, 0, 1]
+[0, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[1, 1, 1]
+[1, 0, 1]
+[0, 0, 1]
+[0, 0, 1]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[0, 0, 0]
+[1, 1, 0]
+[0, 1, 0]
+[0, 1, 1]
+[0, 0, 1]
+[0, 0, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 0, 0]
+[0, 1, 0]
+[1, 1, 0]
+[0, 1, 1]
+[0, 0, 1]
+[0, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[0, 1, 1]
+[0, 0, 1]
+[1, 0, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 0, 0]
+[1, 1, 1]
+[0, 1, 1]
+[0, 1, 1]
+[1, 1, 0]
+[1, 1, 1]
+[0, 1, 1]
+[0, 0, 1]
+[1, 0, 1]
+[0, 1, 1]
+[0, 0, 1]
+[1, 0, 1]
+[1, 1, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 1, 1]
+[1, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+[1, 0, 0]
+[1, 1, 1]
+[0, 1, 1]
+[0, 1, 0]
+[1, 0, 1]
+[1, 0, 1]
+[0, 1, 0]
+[0, 1, 1]
+[0, 0, 1]
+[1, 1, 1]
+[1, 0, 1]
+[1, 1, 1]
+[1, 0, 0]
+[0, 0, 0]
+[0, 1, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[1, 1, 0]
+[1, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 1, 0]
+[0, 1, 0]
+[0, 1, 0]
+[0, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[0, 0, 0]
+[1, 0, 0]
+[1, 1, 0]
+[1, 1, 0]
+[1, 1, 0]
+
+Finished at 2016-03-02 17:22:23.309763!
+Total Time: 3:10:03.740247

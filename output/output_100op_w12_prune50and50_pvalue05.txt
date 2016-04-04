@@ -1,0 +1,549 @@
+Starting at 2016-03-02 14:10:43.832565...
+
+	
+Parameters:	
+Table:claim_events_100op	
+Limit Infrequent Events: 50	
+Limit Infrequent Pairs: 50	
+Prune KL-Divergence: False	
+Window: 12	
+Laplace Pseudocounts: 1	
+P-value Threshold: 0.05	
+
+Found:0 Checked:1 Candidates:410  (AssRouteToOffice AssToFileHandler)
+Found:0 Checked:2 Candidates:409  (AssRouteToOffice ClaimActivityLog)
+Found:0 Checked:3 Candidates:408  (AssRouteToOffice ClaimClosed)
+Found:0 Checked:4 Candidates:407  (AssRouteToOffice ClaimReported)
+Found:0 Checked:5 Candidates:406  (AssRouteToOffice ClaimSetup)
+Found:0 Checked:6 Candidates:405  (AssRouteToOffice PerilActivity)
+Found:0 Checked:7 Candidates:404  (AssToFileHandler AssRouteToOffice)
+Found:0 Checked:8 Candidates:403  (AssToFileHandler AudatexReceipt)
+Found:0 Checked:9 Candidates:402  (AssToFileHandler ClaimActivityLog)
+Found:0 Checked:10 Candidates:401  (AssToFileHandler ClaimClosed)
+Found:0 Checked:11 Candidates:400  (AssToFileHandler ClaimEdited)
+Found:0 Checked:12 Candidates:399  (AssToFileHandler ClaimReported)
+Found:0 Checked:13 Candidates:398  (AssToFileHandler ClaimSetup)
+Found:0 Checked:14 Candidates:397  (AssToFileHandler Correspondencsent)
+Found:0 Checked:15 Candidates:396  (AssToFileHandler DocAddInProgress)
+Found:0 Checked:16 Candidates:395  (AssToFileHandler DocumentAdded)
+Found:0 Checked:17 Candidates:394  (AssToFileHandler FYISent)
+Found:0 Checked:18 Candidates:393  (AssToFileHandler Inbound)
+Found:0 Checked:19 Candidates:392  (AssToFileHandler InitialContact)
+Found:0 Checked:20 Candidates:391  (AssToFileHandler LiabilityAnalysis)
+Found:0 Checked:21 Candidates:390  (AssToFileHandler Outbound)
+Found:0 Checked:22 Candidates:389  (AssToFileHandler PartyEdited)
+Found:0 Checked:23 Candidates:388  (AssToFileHandler PerilActivity)
+Found:0 Checked:24 Candidates:387  (AssToFileHandler SuspendedItem)
+Found:0 Checked:25 Candidates:386  (AssToFileHandler Suspense)
+Found:0 Checked:26 Candidates:385  (AssToFileHandler UnsuspendedItem)
+Found:0 Checked:27 Candidates:384  (AssToFileHandler Vehicle)
+Found:0 Checked:28 Candidates:383  (AssToFileHandler VehicleEdited)
+Found:0 Checked:29 Candidates:382  (AudatexReceipt AssToFileHandler)
+Found:0 Checked:30 Candidates:381  (AudatexReceipt AudatexReceipt)
+Found:0 Checked:31 Candidates:380  (AudatexReceipt ClaimActivityLog)
+Found:0 Checked:32 Candidates:379  (AudatexReceipt ClaimClosed)
+Found:0 Checked:33 Candidates:378  (AudatexReceipt ClaimEdited)
+Found:0 Checked:34 Candidates:377  (AudatexReceipt ClaimReported)
+Found:0 Checked:35 Candidates:376  (AudatexReceipt ClaimSetup)
+Found:0 Checked:36 Candidates:375  (AudatexReceipt Correspondencsent)
+Found:0 Checked:37 Candidates:374  (AudatexReceipt FYISent)
+Found:0 Checked:38 Candidates:373  (AudatexReceipt Inbound)
+Found:0 Checked:39 Candidates:372  (AudatexReceipt InitialContact)
+Found:0 Checked:40 Candidates:371  (AudatexReceipt LiabilityAnalysis)
+Found:0 Checked:41 Candidates:370  (AudatexReceipt Outbound)
+Found:0 Checked:42 Candidates:369  (AudatexReceipt PartyEdited)
+Found:0 Checked:43 Candidates:368  (AudatexReceipt PerilActivity)
+Found:0 Checked:44 Candidates:367  (AudatexReceipt SuspendedItem)
+Found:0 Checked:45 Candidates:366  (AudatexReceipt Suspense)
+Found:0 Checked:46 Candidates:365  (AudatexReceipt UnsuspendedItem)
+Found:0 Checked:47 Candidates:364  (AudatexReceipt Vehicle)
+Found:0 Checked:48 Candidates:363  (AudatexReceipt VehicleEdited)
+Found:0 Checked:49 Candidates:362  (ClaimActivityLog AssRouteToOffice)
+Found:0 Checked:50 Candidates:361  (ClaimActivityLog AssToFileHandler)
+Found:0 Checked:51 Candidates:360  (ClaimActivityLog AudatexReceipt)
+Found:0 Checked:52 Candidates:359  (ClaimActivityLog ClaimActivityLog)
+Distribution for (ClaimActivityLog 1,2 ClaimActivityLog)
+N_a: 422, N_ab: 65, Critical interval: ((1, 2)), P(success): 0.1201, p_value: 0.0218
+
+Found:1 Checked:53 Candidates:362  (ClaimActivityLog ClaimClosed)
+Found:1 Checked:54 Candidates:361  (ClaimActivityLog ClaimEdited)
+Found:1 Checked:55 Candidates:360  (ClaimActivityLog ClaimReported)
+Found:1 Checked:56 Candidates:359  (ClaimActivityLog ClaimSetup)
+Found:1 Checked:57 Candidates:358  (ClaimActivityLog Correspondencsent)
+Found:1 Checked:58 Candidates:357  (ClaimActivityLog DocAddInProgress)
+Found:1 Checked:59 Candidates:356  (ClaimActivityLog DocumentAdded)
+Found:1 Checked:60 Candidates:355  (ClaimActivityLog FYISent)
+Found:1 Checked:61 Candidates:354  (ClaimActivityLog Inbound)
+Found:1 Checked:62 Candidates:353  (ClaimActivityLog InitialContact)
+Found:1 Checked:63 Candidates:352  (ClaimActivityLog LiabilityAnalysis)
+Found:1 Checked:64 Candidates:351  (ClaimActivityLog Outbound)
+Found:1 Checked:65 Candidates:350  (ClaimActivityLog PartyEdited)
+Found:1 Checked:66 Candidates:349  (ClaimActivityLog PerilActivity)
+Found:1 Checked:67 Candidates:348  (ClaimActivityLog SuspendedItem)
+Found:1 Checked:68 Candidates:347  (ClaimActivityLog Suspense)
+Found:1 Checked:69 Candidates:346  (ClaimActivityLog UnsuspendedItem)
+Found:1 Checked:70 Candidates:345  (ClaimActivityLog Vehicle)
+Found:1 Checked:71 Candidates:344  (ClaimActivityLog VehicleEdited)
+Found:1 Checked:72 Candidates:343  (ClaimClosed AssRouteToOffice)
+Found:1 Checked:73 Candidates:342  (ClaimClosed AssToFileHandler)
+Found:1 Checked:74 Candidates:341  (ClaimClosed AudatexReceipt)
+Found:1 Checked:75 Candidates:340  (ClaimClosed ClaimActivityLog)
+Found:1 Checked:76 Candidates:339  (ClaimClosed ClaimEdited)
+Found:1 Checked:77 Candidates:338  (ClaimClosed ClaimReported)
+Found:1 Checked:78 Candidates:337  (ClaimClosed ClaimSetup)
+Found:1 Checked:79 Candidates:336  (ClaimClosed Correspondencsent)
+Found:1 Checked:80 Candidates:335  (ClaimClosed DocAddInProgress)
+Found:1 Checked:81 Candidates:334  (ClaimClosed DocumentAdded)
+Found:1 Checked:82 Candidates:333  (ClaimClosed FYISent)
+Found:1 Checked:83 Candidates:332  (ClaimClosed Inbound)
+Found:1 Checked:84 Candidates:331  (ClaimClosed InitialContact)
+Found:1 Checked:85 Candidates:330  (ClaimClosed LiabilityAnalysis)
+Found:1 Checked:86 Candidates:329  (ClaimClosed Outbound)
+Found:1 Checked:87 Candidates:328  (ClaimClosed PartyEdited)
+Found:1 Checked:88 Candidates:327  (ClaimClosed PerilActivity)
+Found:1 Checked:89 Candidates:326  (ClaimClosed SuspendedItem)
+Found:1 Checked:90 Candidates:325  (ClaimClosed Suspense)
+Found:1 Checked:91 Candidates:324  (ClaimClosed UnsuspendedItem)
+Found:1 Checked:92 Candidates:323  (ClaimClosed Vehicle)
+Found:1 Checked:93 Candidates:322  (ClaimClosed VehicleEdited)
+Found:1 Checked:94 Candidates:321  (ClaimEdited AssToFileHandler)
+Found:1 Checked:95 Candidates:320  (ClaimEdited AudatexReceipt)
+Found:1 Checked:96 Candidates:319  (ClaimEdited ClaimActivityLog)
+Found:1 Checked:97 Candidates:318  (ClaimEdited ClaimClosed)
+Found:1 Checked:98 Candidates:317  (ClaimEdited ClaimReported)
+Found:1 Checked:99 Candidates:316  (ClaimEdited ClaimSetup)
+Found:1 Checked:100 Candidates:315  (ClaimEdited Correspondencsent)
+Found:1 Checked:101 Candidates:314  (ClaimEdited FYISent)
+Found:1 Checked:102 Candidates:313  (ClaimEdited Inbound)
+Found:1 Checked:103 Candidates:312  (ClaimEdited InitialContact)
+Found:1 Checked:104 Candidates:311  (ClaimEdited LiabilityAnalysis)
+Found:1 Checked:105 Candidates:310  (ClaimEdited Outbound)
+Found:1 Checked:106 Candidates:309  (ClaimEdited PartyEdited)
+Found:1 Checked:107 Candidates:308  (ClaimEdited PerilActivity)
+Found:1 Checked:108 Candidates:307  (ClaimEdited SuspendedItem)
+Found:1 Checked:109 Candidates:306  (ClaimEdited Suspense)
+Found:1 Checked:110 Candidates:305  (ClaimEdited UnsuspendedItem)
+Found:1 Checked:111 Candidates:304  (ClaimEdited Vehicle)
+Found:1 Checked:112 Candidates:303  (ClaimEdited VehicleEdited)
+Found:1 Checked:113 Candidates:302  (ClaimReported AssRouteToOffice)
+Found:1 Checked:114 Candidates:301  (ClaimReported AssToFileHandler)
+Found:1 Checked:115 Candidates:300  (ClaimReported AudatexReceipt)
+Found:1 Checked:116 Candidates:299  (ClaimReported ClaimActivityLog)
+Found:1 Checked:117 Candidates:298  (ClaimReported ClaimClosed)
+Found:1 Checked:118 Candidates:297  (ClaimReported ClaimEdited)
+Found:1 Checked:119 Candidates:296  (ClaimReported ClaimSetup)
+Found:1 Checked:120 Candidates:295  (ClaimReported Correspondencsent)
+Found:1 Checked:121 Candidates:294  (ClaimReported DocAddInProgress)
+Found:1 Checked:122 Candidates:293  (ClaimReported DocumentAdded)
+Found:1 Checked:123 Candidates:292  (ClaimReported FYISent)
+Found:1 Checked:124 Candidates:291  (ClaimReported Inbound)
+Found:1 Checked:125 Candidates:290  (ClaimReported InitialContact)
+Found:1 Checked:126 Candidates:289  (ClaimReported LiabilityAnalysis)
+Found:1 Checked:127 Candidates:288  (ClaimReported Outbound)
+Found:1 Checked:128 Candidates:287  (ClaimReported PartyEdited)
+Found:1 Checked:129 Candidates:286  (ClaimReported PerilActivity)
+Found:1 Checked:130 Candidates:285  (ClaimReported SuspendedItem)
+Found:1 Checked:131 Candidates:284  (ClaimReported Suspense)
+Found:1 Checked:132 Candidates:283  (ClaimReported UnsuspendedItem)
+Found:1 Checked:133 Candidates:282  (ClaimReported Vehicle)
+Found:1 Checked:134 Candidates:281  (ClaimReported VehicleEdited)
+Found:1 Checked:135 Candidates:280  (ClaimSetup AssRouteToOffice)
+Found:1 Checked:136 Candidates:279  (ClaimSetup AssToFileHandler)
+Found:1 Checked:137 Candidates:278  (ClaimSetup AudatexReceipt)
+Found:1 Checked:138 Candidates:277  (ClaimSetup ClaimActivityLog)
+Found:1 Checked:139 Candidates:276  (ClaimSetup ClaimClosed)
+Found:1 Checked:140 Candidates:275  (ClaimSetup ClaimEdited)
+Found:1 Checked:141 Candidates:274  (ClaimSetup ClaimReported)
+Found:1 Checked:142 Candidates:273  (ClaimSetup Correspondencsent)
+Found:1 Checked:143 Candidates:272  (ClaimSetup DocAddInProgress)
+Found:1 Checked:144 Candidates:271  (ClaimSetup DocumentAdded)
+Found:1 Checked:145 Candidates:270  (ClaimSetup FYISent)
+Found:1 Checked:146 Candidates:269  (ClaimSetup Inbound)
+Found:1 Checked:147 Candidates:268  (ClaimSetup InitialContact)
+Found:1 Checked:148 Candidates:267  (ClaimSetup LiabilityAnalysis)
+Found:1 Checked:149 Candidates:266  (ClaimSetup Outbound)
+Found:1 Checked:150 Candidates:265  (ClaimSetup PartyEdited)
+Found:1 Checked:151 Candidates:264  (ClaimSetup PerilActivity)
+Found:1 Checked:152 Candidates:263  (ClaimSetup SuspendedItem)
+Found:1 Checked:153 Candidates:262  (ClaimSetup Suspense)
+Found:1 Checked:154 Candidates:261  (ClaimSetup UnsuspendedItem)
+Found:1 Checked:155 Candidates:260  (ClaimSetup Vehicle)
+Found:1 Checked:156 Candidates:259  (ClaimSetup VehicleEdited)
+Found:1 Checked:157 Candidates:258  (Correspondencsent AssToFileHandler)
+Found:1 Checked:158 Candidates:257  (Correspondencsent AudatexReceipt)
+Found:1 Checked:159 Candidates:256  (Correspondencsent ClaimActivityLog)
+Found:1 Checked:160 Candidates:255  (Correspondencsent ClaimClosed)
+Found:1 Checked:161 Candidates:254  (Correspondencsent ClaimEdited)
+Found:1 Checked:162 Candidates:253  (Correspondencsent ClaimReported)
+Found:1 Checked:163 Candidates:252  (Correspondencsent ClaimSetup)
+Found:1 Checked:164 Candidates:251  (Correspondencsent FYISent)
+Found:1 Checked:165 Candidates:250  (Correspondencsent PerilActivity)
+Found:1 Checked:166 Candidates:249  (Correspondencsent SuspendedItem)
+Found:1 Checked:167 Candidates:248  (Correspondencsent UnsuspendedItem)
+Found:1 Checked:168 Candidates:247  (Correspondencsent Vehicle)
+Found:1 Checked:169 Candidates:246  (Correspondencsent VehicleEdited)
+Found:1 Checked:170 Candidates:245  (DocAddInProgress AssToFileHandler)
+Found:1 Checked:171 Candidates:244  (DocAddInProgress ClaimActivityLog)
+Found:1 Checked:172 Candidates:243  (DocAddInProgress ClaimClosed)
+Found:1 Checked:173 Candidates:242  (DocAddInProgress ClaimReported)
+Found:1 Checked:174 Candidates:241  (DocAddInProgress ClaimSetup)
+Found:1 Checked:175 Candidates:240  (DocAddInProgress DocumentAdded)
+Found:1 Checked:176 Candidates:239  (DocAddInProgress FYISent)
+Found:1 Checked:177 Candidates:238  (DocAddInProgress PerilActivity)
+Found:1 Checked:178 Candidates:237  (DocAddInProgress SuspendedItem)
+Found:1 Checked:179 Candidates:236  (DocAddInProgress VehicleEdited)
+Found:1 Checked:180 Candidates:235  (DocumentAdded AssToFileHandler)
+Found:1 Checked:181 Candidates:234  (DocumentAdded ClaimActivityLog)
+Found:1 Checked:182 Candidates:233  (DocumentAdded ClaimClosed)
+Found:1 Checked:183 Candidates:232  (DocumentAdded ClaimReported)
+Found:1 Checked:184 Candidates:231  (DocumentAdded ClaimSetup)
+Found:1 Checked:185 Candidates:230  (DocumentAdded DocAddInProgress)
+Found:1 Checked:186 Candidates:229  (DocumentAdded FYISent)
+Found:1 Checked:187 Candidates:228  (DocumentAdded PerilActivity)
+Found:1 Checked:188 Candidates:227  (DocumentAdded SuspendedItem)
+Found:1 Checked:189 Candidates:226  (DocumentAdded VehicleEdited)
+Found:1 Checked:190 Candidates:225  (FYISent AssToFileHandler)
+Found:1 Checked:191 Candidates:224  (FYISent AudatexReceipt)
+Found:1 Checked:192 Candidates:223  (FYISent ClaimActivityLog)
+Found:1 Checked:193 Candidates:222  (FYISent ClaimClosed)
+Found:1 Checked:194 Candidates:221  (FYISent ClaimEdited)
+Found:1 Checked:195 Candidates:220  (FYISent ClaimReported)
+Found:1 Checked:196 Candidates:219  (FYISent ClaimSetup)
+Found:1 Checked:197 Candidates:218  (FYISent Correspondencsent)
+Found:1 Checked:198 Candidates:217  (FYISent DocAddInProgress)
+Found:1 Checked:199 Candidates:216  (FYISent DocumentAdded)
+Found:1 Checked:200 Candidates:215  (FYISent Inbound)
+Found:1 Checked:201 Candidates:214  (FYISent InitialContact)
+Found:1 Checked:202 Candidates:213  (FYISent LiabilityAnalysis)
+Found:1 Checked:203 Candidates:212  (FYISent Outbound)
+Found:1 Checked:204 Candidates:211  (FYISent PartyEdited)
+Found:1 Checked:205 Candidates:210  (FYISent PerilActivity)
+Found:1 Checked:206 Candidates:209  (FYISent SuspendedItem)
+Found:1 Checked:207 Candidates:208  (FYISent Suspense)
+Found:1 Checked:208 Candidates:207  (FYISent UnsuspendedItem)
+Found:1 Checked:209 Candidates:206  (FYISent Vehicle)
+Found:1 Checked:210 Candidates:205  (FYISent VehicleEdited)
+Found:1 Checked:211 Candidates:204  (Inbound AssToFileHandler)
+Found:1 Checked:212 Candidates:203  (Inbound AudatexReceipt)
+Found:1 Checked:213 Candidates:202  (Inbound ClaimActivityLog)
+Found:1 Checked:214 Candidates:201  (Inbound ClaimClosed)
+Found:1 Checked:215 Candidates:200  (Inbound ClaimEdited)
+Found:1 Checked:216 Candidates:199  (Inbound ClaimReported)
+Found:1 Checked:217 Candidates:198  (Inbound ClaimSetup)
+Found:1 Checked:218 Candidates:197  (Inbound FYISent)
+Found:1 Checked:219 Candidates:196  (Inbound Inbound)
+Found:1 Checked:220 Candidates:195  (Inbound PerilActivity)
+Found:1 Checked:221 Candidates:194  (Inbound SuspendedItem)
+Found:1 Checked:222 Candidates:193  (Inbound Suspense)
+Found:1 Checked:223 Candidates:192  (Inbound UnsuspendedItem)
+Found:1 Checked:224 Candidates:191  (Inbound Vehicle)
+Found:1 Checked:225 Candidates:190  (Inbound VehicleEdited)
+Found:1 Checked:226 Candidates:189  (InitialContact AssToFileHandler)
+Found:1 Checked:227 Candidates:188  (InitialContact AudatexReceipt)
+Found:1 Checked:228 Candidates:187  (InitialContact ClaimActivityLog)
+Found:1 Checked:229 Candidates:186  (InitialContact ClaimClosed)
+Found:1 Checked:230 Candidates:185  (InitialContact ClaimEdited)
+Found:1 Checked:231 Candidates:184  (InitialContact ClaimReported)
+Found:1 Checked:232 Candidates:183  (InitialContact ClaimSetup)
+Found:1 Checked:233 Candidates:182  (InitialContact FYISent)
+Found:1 Checked:234 Candidates:181  (InitialContact LiabilityAnalysis)
+Found:1 Checked:235 Candidates:180  (InitialContact PartyEdited)
+Found:1 Checked:236 Candidates:179  (InitialContact PerilActivity)
+Found:1 Checked:237 Candidates:178  (InitialContact SuspendedItem)
+Found:1 Checked:238 Candidates:177  (InitialContact Suspense)
+Found:1 Checked:239 Candidates:176  (InitialContact UnsuspendedItem)
+Found:1 Checked:240 Candidates:175  (InitialContact Vehicle)
+Found:1 Checked:241 Candidates:174  (InitialContact VehicleEdited)
+Found:1 Checked:242 Candidates:173  (LiabilityAnalysis AssToFileHandler)
+Found:1 Checked:243 Candidates:172  (LiabilityAnalysis AudatexReceipt)
+Found:1 Checked:244 Candidates:171  (LiabilityAnalysis ClaimActivityLog)
+Found:1 Checked:245 Candidates:170  (LiabilityAnalysis ClaimClosed)
+Found:1 Checked:246 Candidates:169  (LiabilityAnalysis ClaimEdited)
+Found:1 Checked:247 Candidates:168  (LiabilityAnalysis ClaimReported)
+Found:1 Checked:248 Candidates:167  (LiabilityAnalysis ClaimSetup)
+Found:1 Checked:249 Candidates:166  (LiabilityAnalysis FYISent)
+Found:1 Checked:250 Candidates:165  (LiabilityAnalysis InitialContact)
+Found:1 Checked:251 Candidates:164  (LiabilityAnalysis PartyEdited)
+Found:1 Checked:252 Candidates:163  (LiabilityAnalysis PerilActivity)
+Found:1 Checked:253 Candidates:162  (LiabilityAnalysis SuspendedItem)
+Found:1 Checked:254 Candidates:161  (LiabilityAnalysis Suspense)
+Found:1 Checked:255 Candidates:160  (LiabilityAnalysis UnsuspendedItem)
+Found:1 Checked:256 Candidates:159  (LiabilityAnalysis Vehicle)
+Found:1 Checked:257 Candidates:158  (LiabilityAnalysis VehicleEdited)
+Found:1 Checked:258 Candidates:157  (Outbound AssToFileHandler)
+Found:1 Checked:259 Candidates:156  (Outbound AudatexReceipt)
+Found:1 Checked:260 Candidates:155  (Outbound ClaimActivityLog)
+Found:1 Checked:261 Candidates:154  (Outbound ClaimClosed)
+Found:1 Checked:262 Candidates:153  (Outbound ClaimEdited)
+Found:1 Checked:263 Candidates:152  (Outbound ClaimReported)
+Found:1 Checked:264 Candidates:151  (Outbound ClaimSetup)
+Found:1 Checked:265 Candidates:150  (Outbound FYISent)
+Found:1 Checked:266 Candidates:149  (Outbound PerilActivity)
+Found:1 Checked:267 Candidates:148  (Outbound SuspendedItem)
+Found:1 Checked:268 Candidates:147  (Outbound Suspense)
+Found:1 Checked:269 Candidates:146  (Outbound UnsuspendedItem)
+Found:1 Checked:270 Candidates:145  (Outbound Vehicle)
+Found:1 Checked:271 Candidates:144  (Outbound VehicleEdited)
+Found:1 Checked:272 Candidates:143  (PartyEdited AssToFileHandler)
+Found:1 Checked:273 Candidates:142  (PartyEdited AudatexReceipt)
+Found:1 Checked:274 Candidates:141  (PartyEdited ClaimActivityLog)
+Found:1 Checked:275 Candidates:140  (PartyEdited ClaimClosed)
+Found:1 Checked:276 Candidates:139  (PartyEdited ClaimEdited)
+Found:1 Checked:277 Candidates:138  (PartyEdited ClaimReported)
+Found:1 Checked:278 Candidates:137  (PartyEdited ClaimSetup)
+Found:1 Checked:279 Candidates:136  (PartyEdited FYISent)
+Found:1 Checked:280 Candidates:135  (PartyEdited InitialContact)
+Found:1 Checked:281 Candidates:134  (PartyEdited LiabilityAnalysis)
+Found:1 Checked:282 Candidates:133  (PartyEdited PerilActivity)
+Found:1 Checked:283 Candidates:132  (PartyEdited SuspendedItem)
+Found:1 Checked:284 Candidates:131  (PartyEdited UnsuspendedItem)
+Found:1 Checked:285 Candidates:130  (PartyEdited Vehicle)
+Found:1 Checked:286 Candidates:129  (PartyEdited VehicleEdited)
+Found:1 Checked:287 Candidates:128  (PerilActivity AssRouteToOffice)
+Found:1 Checked:288 Candidates:127  (PerilActivity AssToFileHandler)
+Found:1 Checked:289 Candidates:126  (PerilActivity AudatexReceipt)
+Found:1 Checked:290 Candidates:125  (PerilActivity ClaimActivityLog)
+Found:1 Checked:291 Candidates:124  (PerilActivity ClaimClosed)
+Found:1 Checked:292 Candidates:123  (PerilActivity ClaimEdited)
+Found:1 Checked:293 Candidates:122  (PerilActivity ClaimReported)
+Found:1 Checked:294 Candidates:121  (PerilActivity ClaimSetup)
+Found:1 Checked:295 Candidates:120  (PerilActivity Correspondencsent)
+Found:1 Checked:296 Candidates:119  (PerilActivity DocAddInProgress)
+Found:1 Checked:297 Candidates:118  (PerilActivity DocumentAdded)
+Found:1 Checked:298 Candidates:117  (PerilActivity FYISent)
+Found:1 Checked:299 Candidates:116  (PerilActivity Inbound)
+Found:1 Checked:300 Candidates:115  (PerilActivity InitialContact)
+Found:1 Checked:301 Candidates:114  (PerilActivity LiabilityAnalysis)
+Found:1 Checked:302 Candidates:113  (PerilActivity Outbound)
+Found:1 Checked:303 Candidates:112  (PerilActivity PartyEdited)
+Found:1 Checked:304 Candidates:111  (PerilActivity PerilActivity)
+Found:1 Checked:305 Candidates:110  (PerilActivity SuspendedItem)
+Found:1 Checked:306 Candidates:109  (PerilActivity Suspense)
+Found:1 Checked:307 Candidates:108  (PerilActivity UnsuspendedItem)
+Found:1 Checked:308 Candidates:107  (PerilActivity Vehicle)
+Found:1 Checked:309 Candidates:106  (PerilActivity VehicleEdited)
+Found:1 Checked:310 Candidates:105  (SuspendedItem AssToFileHandler)
+Found:1 Checked:311 Candidates:104  (SuspendedItem AudatexReceipt)
+Found:1 Checked:312 Candidates:103  (SuspendedItem ClaimActivityLog)
+Found:1 Checked:313 Candidates:102  (SuspendedItem ClaimClosed)
+Found:1 Checked:314 Candidates:101  (SuspendedItem ClaimEdited)
+Found:1 Checked:315 Candidates:100  (SuspendedItem ClaimReported)
+Found:1 Checked:316 Candidates:99  (SuspendedItem ClaimSetup)
+Found:1 Checked:317 Candidates:98  (SuspendedItem Correspondencsent)
+Found:1 Checked:318 Candidates:97  (SuspendedItem DocAddInProgress)
+Found:1 Checked:319 Candidates:96  (SuspendedItem DocumentAdded)
+Found:1 Checked:320 Candidates:95  (SuspendedItem FYISent)
+Found:1 Checked:321 Candidates:94  (SuspendedItem Inbound)
+Found:1 Checked:322 Candidates:93  (SuspendedItem InitialContact)
+Found:1 Checked:323 Candidates:92  (SuspendedItem LiabilityAnalysis)
+Found:1 Checked:324 Candidates:91  (SuspendedItem Outbound)
+Found:1 Checked:325 Candidates:90  (SuspendedItem PartyEdited)
+Found:1 Checked:326 Candidates:89  (SuspendedItem PerilActivity)
+Found:1 Checked:327 Candidates:88  (SuspendedItem SuspendedItem)
+Found:1 Checked:328 Candidates:87  (SuspendedItem Suspense)
+Found:1 Checked:329 Candidates:86  (SuspendedItem UnsuspendedItem)
+Found:1 Checked:330 Candidates:85  (SuspendedItem Vehicle)
+Found:1 Checked:331 Candidates:84  (SuspendedItem VehicleEdited)
+Found:1 Checked:332 Candidates:83  (Suspense AssToFileHandler)
+Found:1 Checked:333 Candidates:82  (Suspense AudatexReceipt)
+Found:1 Checked:334 Candidates:81  (Suspense ClaimActivityLog)
+Found:1 Checked:335 Candidates:80  (Suspense ClaimClosed)
+Found:1 Checked:336 Candidates:79  (Suspense ClaimEdited)
+Found:1 Checked:337 Candidates:78  (Suspense ClaimReported)
+Found:1 Checked:338 Candidates:77  (Suspense ClaimSetup)
+Found:1 Checked:339 Candidates:76  (Suspense FYISent)
+Found:1 Checked:340 Candidates:75  (Suspense Inbound)
+Found:1 Checked:341 Candidates:74  (Suspense InitialContact)
+Found:1 Checked:342 Candidates:73  (Suspense LiabilityAnalysis)
+Found:1 Checked:343 Candidates:72  (Suspense Outbound)
+Found:1 Checked:344 Candidates:71  (Suspense PerilActivity)
+Found:1 Checked:345 Candidates:70  (Suspense SuspendedItem)
+Found:1 Checked:346 Candidates:69  (Suspense Suspense)
+Found:1 Checked:347 Candidates:68  (Suspense UnsuspendedItem)
+Found:1 Checked:348 Candidates:67  (Suspense Vehicle)
+Found:1 Checked:349 Candidates:66  (Suspense VehicleEdited)
+Found:1 Checked:350 Candidates:65  (UnsuspendedItem AssToFileHandler)
+Found:1 Checked:351 Candidates:64  (UnsuspendedItem AudatexReceipt)
+Found:1 Checked:352 Candidates:63  (UnsuspendedItem ClaimActivityLog)
+Found:1 Checked:353 Candidates:62  (UnsuspendedItem ClaimClosed)
+Found:1 Checked:354 Candidates:61  (UnsuspendedItem ClaimEdited)
+Found:1 Checked:355 Candidates:60  (UnsuspendedItem ClaimReported)
+Found:1 Checked:356 Candidates:59  (UnsuspendedItem ClaimSetup)
+Found:1 Checked:357 Candidates:58  (UnsuspendedItem Correspondencsent)
+Found:1 Checked:358 Candidates:57  (UnsuspendedItem FYISent)
+Found:1 Checked:359 Candidates:56  (UnsuspendedItem Inbound)
+Found:1 Checked:360 Candidates:55  (UnsuspendedItem InitialContact)
+Found:1 Checked:361 Candidates:54  (UnsuspendedItem LiabilityAnalysis)
+Found:1 Checked:362 Candidates:53  (UnsuspendedItem Outbound)
+Found:1 Checked:363 Candidates:52  (UnsuspendedItem PartyEdited)
+Found:1 Checked:364 Candidates:51  (UnsuspendedItem PerilActivity)
+Found:1 Checked:365 Candidates:50  (UnsuspendedItem SuspendedItem)
+Found:1 Checked:366 Candidates:49  (UnsuspendedItem Suspense)
+Found:1 Checked:367 Candidates:48  (UnsuspendedItem UnsuspendedItem)
+Found:1 Checked:368 Candidates:47  (UnsuspendedItem Vehicle)
+Found:1 Checked:369 Candidates:46  (UnsuspendedItem VehicleEdited)
+Found:1 Checked:370 Candidates:45  (Vehicle AssToFileHandler)
+Found:1 Checked:371 Candidates:44  (Vehicle AudatexReceipt)
+Distribution for (Vehicle 1,3 AudatexReceipt)
+N_a: 516, N_ab: 56, Critical interval: ((1, 3)), P(success): 0.0838, p_value: 0.0288
+
+Found:2 Checked:372 Candidates:43  (Vehicle ClaimActivityLog)
+Found:2 Checked:373 Candidates:42  (Vehicle ClaimClosed)
+Found:2 Checked:374 Candidates:41  (Vehicle ClaimEdited)
+Found:2 Checked:375 Candidates:40  (Vehicle ClaimReported)
+Found:2 Checked:376 Candidates:39  (Vehicle ClaimSetup)
+Found:2 Checked:377 Candidates:38  (Vehicle Correspondencsent)
+Found:2 Checked:378 Candidates:37  (Vehicle FYISent)
+Found:2 Checked:379 Candidates:36  (Vehicle Inbound)
+Found:2 Checked:380 Candidates:35  (Vehicle InitialContact)
+Found:2 Checked:381 Candidates:34  (Vehicle LiabilityAnalysis)
+Found:2 Checked:382 Candidates:33  (Vehicle Outbound)
+Found:2 Checked:383 Candidates:32  (Vehicle PartyEdited)
+Found:2 Checked:384 Candidates:31  (Vehicle PerilActivity)
+Found:2 Checked:385 Candidates:30  (Vehicle SuspendedItem)
+Found:2 Checked:386 Candidates:29  (Vehicle Suspense)
+Found:2 Checked:387 Candidates:28  (Vehicle UnsuspendedItem)
+Found:2 Checked:388 Candidates:27  (Vehicle Vehicle)
+Found:2 Checked:389 Candidates:26  (Vehicle VehicleEdited)
+Found:2 Checked:390 Candidates:25  (VehicleEdited AssToFileHandler)
+Found:2 Checked:391 Candidates:24  (VehicleEdited AudatexReceipt)
+Found:2 Checked:392 Candidates:23  (VehicleEdited ClaimActivityLog)
+Found:2 Checked:393 Candidates:22  (VehicleEdited ClaimClosed)
+Found:2 Checked:394 Candidates:21  (VehicleEdited ClaimEdited)
+Found:2 Checked:395 Candidates:20  (VehicleEdited ClaimReported)
+Found:2 Checked:396 Candidates:19  (VehicleEdited ClaimSetup)
+Found:2 Checked:397 Candidates:18  (VehicleEdited Correspondencsent)
+Found:2 Checked:398 Candidates:17  (VehicleEdited DocAddInProgress)
+Found:2 Checked:399 Candidates:16  (VehicleEdited DocumentAdded)
+Found:2 Checked:400 Candidates:15  (VehicleEdited FYISent)
+Found:2 Checked:401 Candidates:14  (VehicleEdited Inbound)
+Found:2 Checked:402 Candidates:13  (VehicleEdited InitialContact)
+Found:2 Checked:403 Candidates:12  (VehicleEdited LiabilityAnalysis)
+Found:2 Checked:404 Candidates:11  (VehicleEdited Outbound)
+Found:2 Checked:405 Candidates:10  (VehicleEdited PartyEdited)
+Found:2 Checked:406 Candidates:9  (VehicleEdited PerilActivity)
+Found:2 Checked:407 Candidates:8  (VehicleEdited SuspendedItem)
+Found:2 Checked:408 Candidates:7  (VehicleEdited Suspense)
+Found:2 Checked:409 Candidates:6  (VehicleEdited UnsuspendedItem)
+Found:2 Checked:410 Candidates:5  (VehicleEdited Vehicle)
+Found:2 Checked:411 Candidates:4  (VehicleEdited VehicleEdited)
+Found:2 Checked:412 Candidates:3  ((ClaimActivityLog 1,2 ClaimActivityLog) ClaimActivityLog)
+Found:2 Checked:413 Candidates:2  (ClaimActivityLog (ClaimActivityLog 1,2 ClaimActivityLog))
+Found:2 Checked:414 Candidates:1  ((ClaimActivityLog 1,2 ClaimActivityLog) ClaimReported)
+Found:2 Checked:415 Candidates:0  (ClaimReported (ClaimActivityLog 1,2 ClaimActivityLog))
+
+Checked 415 patterns.
+
+Considering completeness of (ClaimActivityLog 1,2 ClaimActivityLog): Complete
+Considering completeness of (Vehicle 1,3 AudatexReceipt): Complete
+
+Complete patterns:
+Pattern 0: (ClaimActivityLog 1,2 ClaimActivityLog)
+Observation Periods with this pattern: [1, 2, 3, 5, 6, 7, 8, 10, 11, 12, 13, 16, 21, 22, 23, 24, 25, 26, 27, 30, 31, 32, 36, 37, 41, 43, 44, 47, 48, 49, 51, 52, 55, 70, 71, 73, 74, 76, 77, 82, 83, 84, 85, 89, 90, 91, 93, 95, 96, 97, 99]
+
+Pattern 1: (Vehicle 1,3 AudatexReceipt)
+Observation Periods with this pattern: [3, 5, 6, 7, 8, 10, 11, 12, 13, 16, 19, 26, 29, 30, 32, 34, 36, 37, 38, 39, 45, 47, 51, 52, 69, 71, 72, 73, 78, 79, 81, 82, 84, 89, 90, 91, 92, 94, 95, 96, 97, 98, 99]
+
+Output dataset written to outputdata.csv:
+[1, 0]
+[1, 0]
+[1, 1]
+[0, 0]
+[1, 1]
+[1, 1]
+[1, 1]
+[1, 1]
+[0, 0]
+[1, 1]
+[1, 1]
+[1, 1]
+[1, 1]
+[0, 0]
+[0, 0]
+[1, 1]
+[0, 0]
+[0, 0]
+[0, 1]
+[0, 0]
+[1, 0]
+[1, 0]
+[1, 0]
+[1, 0]
+[1, 0]
+[1, 1]
+[1, 0]
+[0, 0]
+[0, 1]
+[1, 1]
+[1, 0]
+[1, 1]
+[0, 0]
+[0, 1]
+[0, 0]
+[1, 1]
+[1, 1]
+[0, 1]
+[0, 1]
+[0, 0]
+[1, 0]
+[0, 0]
+[1, 0]
+[1, 0]
+[0, 1]
+[0, 0]
+[1, 1]
+[1, 0]
+[1, 0]
+[0, 0]
+[1, 1]
+[1, 1]
+[0, 0]
+[0, 0]
+[1, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[0, 1]
+[1, 0]
+[1, 1]
+[0, 1]
+[1, 1]
+[1, 0]
+[0, 0]
+[1, 0]
+[1, 0]
+[0, 1]
+[0, 1]
+[0, 0]
+[0, 1]
+[1, 1]
+[1, 0]
+[1, 1]
+[1, 0]
+[0, 0]
+[0, 0]
+[0, 0]
+[1, 1]
+[1, 1]
+[1, 1]
+[0, 1]
+[1, 0]
+[0, 1]
+[1, 1]
+[1, 1]
+[1, 1]
+[0, 1]
+[1, 1]
+
+Finished at 2016-03-02 14:11:25.587071!
+Total Time: 0:00:41.754506

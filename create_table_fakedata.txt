@@ -1,0 +1,40 @@
+DROP TABLE `fakedata2`;
+
+CREATE TABLE `fakedata2` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`observation_period` int(11) DEFAULT NULL,`observation_period_T` int(11) DEFAULT NULL,`event_type` varchar(200) DEFAULT NULL,`time_start` int(11) DEFAULT NULL,`time_end` int(11) DEFAULT NULL, `happiness` int(11) DEFAULT NULL,PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+
+INSERT INTO fakedata2 VALUES ("1", "1", "64", "2", "1", "1", "5");
+INSERT INTO fakedata2 VALUES ("2", "1", "64", "1", "10", "10", "5");
+INSERT INTO fakedata2 VALUES ("3", "1", "64", "2", "12", "12", "5");
+INSERT INTO fakedata2 VALUES ("4", "1", "64", "5", "13", "13", "5");
+INSERT INTO fakedata2 VALUES ("5", "1", "64", "2", "16", "16", "5");
+INSERT INTO fakedata2 VALUES ("6", "1", "64", "2", "17", "17", "5");
+INSERT INTO fakedata2 VALUES ("7", "1", "64", "5", "30", "30", "5");
+INSERT INTO fakedata2 VALUES ("8", "1", "64", "2", "45", "45", "5");
+INSERT INTO fakedata2 VALUES ("9", "1", "64", "2", "50", "50", "5");
+INSERT INTO fakedata2 VALUES ("10", "1", "64", "3", "55", "55", "5");
+INSERT INTO fakedata2 VALUES ("11", "1", "64", "2", "60", "60", "5");
+INSERT INTO fakedata2 VALUES ("12", "1", "64", "4", "65", "65", "5");
+
+INSERT INTO fakedata2 VALUES ("13", "2", "62", "4", "1", "1", "5");
+INSERT INTO fakedata2 VALUES ("14", "2", "62", "3", "12", "12", "5");
+INSERT INTO fakedata2 VALUES ("15", "2", "62", "3", "15", "15", "5");
+INSERT INTO fakedata2 VALUES ("16", "2", "62", "3", "40", "40", "5");
+INSERT INTO fakedata2 VALUES ("17", "2", "62", "3", "44", "44", "5");
+INSERT INTO fakedata2 VALUES ("18", "2", "62", "1", "60", "60", "5");
+INSERT INTO fakedata2 VALUES ("19", "2", "62", "4", "61", "61", "5");
+INSERT INTO fakedata2 VALUES ("20", "2", "62", "2", "63", "63", "5");
+INSERT INTO fakedata2 VALUES ("21", "2", "62", "5", "64", "64", "5");
+
+INSERT INTO fakedata2 VALUES ("22", "3", "158", "6", "1", "1", "1");
+INSERT INTO fakedata2 VALUES ("23", "3", "158", "7", "4", "4", "1");
+INSERT INTO fakedata2 VALUES ("24", "3", "158", "8", "150", "150", "1");
+INSERT INTO fakedata2 VALUES ("25", "3", "158", "9", "151", "151", "1");
+INSERT INTO fakedata2 VALUES ("26", "3", "158", "7", "159", "159", "1");
+
+INSERT INTO fakedata2 VALUES ("27", "4", "129", "7", "1", "1", "1");
+INSERT INTO fakedata2 VALUES ("28", "4", "129", "6", "20", "20", "1");
+INSERT INTO fakedata2 VALUES ("29", "4", "129", "6", "30", "30", "1");
+INSERT INTO fakedata2 VALUES ("30", "4", "129", "8", "39", "39", "1");
+INSERT INTO fakedata2 VALUES ("31", "4", "129", "6", "80", "80", "1");
+INSERT INTO fakedata2 VALUES ("32", "4", "129", "6", "120", "120", "1");
+INSERT INTO fakedata2 VALUES ("33", "4", "129", "6", "130", "130", "1");
