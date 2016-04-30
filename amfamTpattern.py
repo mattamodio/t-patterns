@@ -27,7 +27,7 @@ elif DATA=='fake':
 p_value_threshold = .05
 WINDOW = 24
 laplace = 1 #prior on N_b per observation periodtmp
-KL_CUTOFF = .5 #2.706 #chi-squared with df=1 and alpha=.10
+KL_CUTOFF = .1 #2.706 #chi-squared with df=1 and alpha=.10
 LIMIT_INFREQUENT_EVENTS = 1 #false or a support threshold
 LIMIT_INFREQUENT_PAIRS = 1 #false or a support threshold
 OUTPUT_DATA_FILE = 'outputdata_with_happiness7.csv'
