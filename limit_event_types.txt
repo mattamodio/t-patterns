@@ -1,1 +1,0 @@
-["Property Damages", "Vehicle", "Claim Activity Log"]

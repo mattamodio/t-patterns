@@ -1,0 +1,116 @@
+Starting at 2016-05-01 22:45:58.112403...
+
+	
+Parameters:	
+Limit Infrequent Events: 1	
+Limit Infrequent Pairs: 1	
+Prune KL-Divergence: 0.1	
+Window: 48	
+Laplace Pseudocounts: 1	
+P-value Threshold: 0.01	
+
+Found:0 Checked:1 Candidates:24  (home_goal home_goal)
+Found:0 Checked:2 Candidates:23  (home_goal start)
+Found:0 Checked:3 Candidates:22  (home_goal end)
+Found:0 Checked:4 Candidates:21  (home_goal away_goal)
+Found:0 Checked:5 Candidates:20  (home_goal halftime)
+Found:0 Checked:6 Candidates:19  (start home_goal)
+Found:0 Checked:7 Candidates:18  (start start)
+Found:0 Checked:8 Candidates:17  (start end)
+Found:0 Checked:9 Candidates:16  (start away_goal)
+Found:0 Checked:10 Candidates:15  (start halftime)
+Distribution for (start 0,46 halftime)
+N_a: 100, N_ab: 100, Critical interval: ((0, 46)), P(success): 0.6282, p_value: 0.0000
+
+Found:1 Checked:11 Candidates:24  (end home_goal)
+Found:1 Checked:12 Candidates:23  (end start)
+Found:1 Checked:13 Candidates:22  (end end)
+Found:1 Checked:14 Candidates:21  (end away_goal)
+Found:1 Checked:15 Candidates:20  (end halftime)
+Found:1 Checked:16 Candidates:19  (away_goal home_goal)
+Found:1 Checked:17 Candidates:18  (away_goal start)
+Found:1 Checked:18 Candidates:17  (away_goal end)
+Found:1 Checked:19 Candidates:16  (away_goal away_goal)
+Found:1 Checked:20 Candidates:15  (away_goal halftime)
+Found:1 Checked:21 Candidates:14  (halftime home_goal)
+Found:1 Checked:22 Candidates:13  (halftime start)
+Found:1 Checked:23 Candidates:12  (halftime end)
+Distribution for (halftime 0,46 end)
+N_a: 100, N_ab: 100, Critical interval: ((0, 46)), P(success): 0.6282, p_value: 0.0000
+
+Found:2 Checked:24 Candidates:23  (halftime away_goal)
+Found:2 Checked:25 Candidates:22  (halftime halftime)
+Found:2 Checked:26 Candidates:21  ((start 0,46 halftime) home_goal)
+Found:2 Checked:27 Candidates:20  (home_goal (start 0,46 halftime))
+Found:2 Checked:28 Candidates:19  ((start 0,46 halftime) start)
+Found:2 Checked:29 Candidates:18  (start (start 0,46 halftime))
+Found:2 Checked:30 Candidates:17  ((start 0,46 halftime) end)
+Distribution for ((start 0,46 halftime) 0,46 end)
+N_a: 100, N_ab: 100, Critical interval: ((0, 46)), P(success): 0.6282, p_value: 0.0000
+
+Found:3 Checked:31 Candidates:30  (end (start 0,46 halftime))
+Found:3 Checked:32 Candidates:29  ((start 0,46 halftime) away_goal)
+Found:3 Checked:33 Candidates:28  (away_goal (start 0,46 halftime))
+Found:3 Checked:34 Candidates:27  ((start 0,46 halftime) halftime)
+Found:3 Checked:35 Candidates:26  (halftime (start 0,46 halftime))
+Found:3 Checked:36 Candidates:25  ((halftime 0,46 end) home_goal)
+Found:3 Checked:37 Candidates:24  (home_goal (halftime 0,46 end))
+Found:3 Checked:38 Candidates:23  ((halftime 0,46 end) start)
+Found:3 Checked:39 Candidates:22  (start (halftime 0,46 end))
+Distribution for (start 0,46 (halftime 0,46 end))
+N_a: 100, N_ab: 100, Critical interval: ((0, 46)), P(success): 0.6282, p_value: 0.0000
+
+Found:4 Checked:40 Candidates:37  ((halftime 0,46 end) end)
+Found:4 Checked:41 Candidates:36  (end (halftime 0,46 end))
+Found:4 Checked:42 Candidates:35  ((halftime 0,46 end) away_goal)
+Found:4 Checked:43 Candidates:34  (away_goal (halftime 0,46 end))
+Found:4 Checked:44 Candidates:33  ((halftime 0,46 end) halftime)
+Found:4 Checked:45 Candidates:32  (halftime (halftime 0,46 end))
+Found:4 Checked:46 Candidates:31  ((halftime 0,46 end) (start 0,46 halftime))
+Found:4 Checked:47 Candidates:30  ((start 0,46 halftime) (halftime 0,46 end))
+Found:4 Checked:48 Candidates:29  (((start 0,46 halftime) 0,46 end) home_goal)
+Found:4 Checked:49 Candidates:28  (home_goal ((start 0,46 halftime) 0,46 end))
+Found:4 Checked:50 Candidates:27  (((start 0,46 halftime) 0,46 end) start)
+Found:4 Checked:51 Candidates:26  (start ((start 0,46 halftime) 0,46 end))
+Found:4 Checked:52 Candidates:25  (((start 0,46 halftime) 0,46 end) end)
+Found:4 Checked:53 Candidates:24  (end ((start 0,46 halftime) 0,46 end))
+Found:4 Checked:54 Candidates:23  (((start 0,46 halftime) 0,46 end) away_goal)
+Found:4 Checked:55 Candidates:22  (away_goal ((start 0,46 halftime) 0,46 end))
+Found:4 Checked:56 Candidates:21  (((start 0,46 halftime) 0,46 end) halftime)
+Found:4 Checked:57 Candidates:20  (halftime ((start 0,46 halftime) 0,46 end))
+Found:4 Checked:58 Candidates:19  (((start 0,46 halftime) 0,46 end) (start 0,46 halftime))
+Found:4 Checked:59 Candidates:18  ((start 0,46 halftime) ((start 0,46 halftime) 0,46 end))
+Found:4 Checked:60 Candidates:17  (((start 0,46 halftime) 0,46 end) (halftime 0,46 end))
+Found:4 Checked:61 Candidates:16  ((halftime 0,46 end) ((start 0,46 halftime) 0,46 end))
+Found:4 Checked:62 Candidates:15  ((start 0,46 (halftime 0,46 end)) home_goal)
+Found:4 Checked:63 Candidates:14  (home_goal (start 0,46 (halftime 0,46 end)))
+Found:4 Checked:64 Candidates:13  ((start 0,46 (halftime 0,46 end)) start)
+Found:4 Checked:65 Candidates:12  (start (start 0,46 (halftime 0,46 end)))
+Found:4 Checked:66 Candidates:11  ((start 0,46 (halftime 0,46 end)) end)
+Found:4 Checked:67 Candidates:10  (end (start 0,46 (halftime 0,46 end)))
+Found:4 Checked:68 Candidates:9  ((start 0,46 (halftime 0,46 end)) away_goal)
+Found:4 Checked:69 Candidates:8  (away_goal (start 0,46 (halftime 0,46 end)))
+Found:4 Checked:70 Candidates:7  ((start 0,46 (halftime 0,46 end)) halftime)
+Found:4 Checked:71 Candidates:6  (halftime (start 0,46 (halftime 0,46 end)))
+Found:4 Checked:72 Candidates:5  ((start 0,46 (halftime 0,46 end)) (start 0,46 halftime))
+Found:4 Checked:73 Candidates:4  ((start 0,46 halftime) (start 0,46 (halftime 0,46 end)))
+Found:4 Checked:74 Candidates:3  ((start 0,46 (halftime 0,46 end)) (halftime 0,46 end))
+Found:4 Checked:75 Candidates:2  ((halftime 0,46 end) (start 0,46 (halftime 0,46 end)))
+Found:4 Checked:76 Candidates:1  ((start 0,46 (halftime 0,46 end)) ((start 0,46 halftime) 0,46 end))
+Found:4 Checked:77 Candidates:0  (((start 0,46 halftime) 0,46 end) (start 0,46 (halftime 0,46 end)))
+
+Checked 77 patterns.
+
+Considering completeness of (start 0,46 halftime): Not complete
+Considering completeness of (halftime 0,46 end): Not complete
+Considering completeness of ((start 0,46 halftime) 0,46 end): Complete
+Considering completeness of (start 0,46 (halftime 0,46 end)): Skipping tie with ((start 0,46 halftime) 0,46 end)
+
+Complete patterns:
+Pattern 0: start 0,46 halftime 0,46 end
+Observation Periods with this pattern: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+
+Output dataset written to outputdata.csv:
+
+Finished at 2016-05-01 22:46:04.029987!
+Total Time: 0:00:05.917584
